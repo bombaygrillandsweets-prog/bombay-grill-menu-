@@ -89,68 +89,500 @@
                 <!-- Data will be populated here --></div>
             <script>
                 const appetizersData = [
-                    ["Soupe Dal / Dal Soup", "Soupe de lentilles épicées / Spiced lentil soup.", "3.99"],
-                    ["Soupe Schezwan Poulet & Maïs (Petit) / Schezwan Chicken & Corn Soup (Small)", "Soupe épicée au poulet et maïs / Spicy chicken and corn soup.", "6.99"],
-                    ["Soupe Schezwan Poulet & Maïs (Complet) / Schezwan Chicken & Corn Soup (Full)", "Soupe épicée au poulet et maïs / Spicy chicken and corn soup.", "21.99"],
-                    ["Soupe Spéciale du Chef (Petit) / Chef's Special Soup (Small)", "Soupe signature du chef / Chef's signature soup.", "7.99"],
-                    ["Soupe Spéciale du Chef (Complet) / Chef's Special Soup (Full)", "Soupe signature du chef / Chef's signature soup.", "22.99"],
-                    ["Nouilles au Poulet (Petit) / Chicken Noodles (Small)", "Nouilles sautées au poulet / Stir-fried chicken noodles.", "12.99"],
-                    ["Nouilles au Poulet (Complet) / Chicken Noodles (Full)", "Nouilles sautées au poulet / Stir-fried chicken noodles.", "22.99"],
-                    ["Nouilles Végétales (Petit) / Vegetable Noodles (Small)", "Nouilles sautées aux légumes / Stir-fried vegetable noodles.", "12.99"],
-                    ["Nouilles Végétales (Complet) / Vegetable Noodles (Full)", "Nouilles sautées aux légumes / Stir-fried vegetable noodles.", "22.99"],
-                    ["Poulet Dynamite / Dynamite Chicken", "Poulet frit épicé et croustillant / Spicy crispy fried chicken.", "8.99"],
-                    ["Crevettes Dynamite / Dynamite Shrimp", "Crevettes frites épicées / Spicy crispy fried shrimp.", "22.99"],
-                    ["Ailes au Miel / Honey Wings", "Ailes de poulet au miel et épices / Honey-glazed chicken wings.", "19.99"],
-                    ["Momos Poulet Vapeur / Chicken Steam Momos", "Boulettes de poulet vapeur / Steamed chicken dumplings.", "12.99"],
-                    ["Momos Poulet Tandoori / Chicken Tandoori Momos", "Boulettes de poulet tandoori / Tandoori chicken dumplings.", "13.99"],
-                    ["Momos Poulet Manchurian / Chicken Manchurian Momos", "Boulettes de poulet sauce manchurian / Manchurian chicken dumplings.", "14.99"],
-                    ["Burger Zinger / Zinger Burger", "Burger de poulet épicé / Spicy chicken burger.", "12.99"],
-                    ["Burger Végétal / Veggie Burger", "Burger végétarien / Vegetarian burger.", "6.99"],
-                    ["Burger Trio / Trio Burger", "Burger triple saveur / Triple-flavor burger.", "15.99"],
-                    ["Burger aux Nouilles / Noodle Burger", "Burger aux nouilles / Noodle burger.", "8.99"],
-                    ["Aloo Tiki / Aloo Tikki", "Beignets de pommes de terre épicés / Spiced potato patties.", "4.99"],
-                    ["Chana Samosa / Chana Samosa", "Samosas aux pois chiches / Chickpea samosas.", "4.99"],
-                    ["Bombay Bhel Puri / Bombay Bhel Puri", "Salade croustillante de Bombay / Crispy Bombay salad.", "4.99"],
-                    ["Bombay Chatt Papri / Bombay Chaat Papri", "Chaat croustillant de Bombay / Crispy Bombay chaat.", "4.99"],
-                    ["Pani Puri / Pani Puri", "Boules croustillantes farcies / Stuffed crispy balls.", "4.99"],
-                    ["Dahi Phalla / Dahi Bhalla", "Boulettes de lentilles au yaourt / Yogurt lentil fritters.", "5.99"],
-                    ["Pakora Végétarien / Vegetarian Pakora", "Beignets de légumes / Vegetable fritters.", "6.99"],
-                    ["Pakora au Fromage / Paneer Pakora (Cheese)", "Beignets de fromage paneer / Cheese paneer fritters.", "9.99"],
-                    ["Pakora aux Crevettes / Shrimp Pakora", "Beignets de crevettes / Shrimp fritters.", "19.99"],
-                    ["Manchurian / Manchurian", "Boulettes sauce aigre-douce / Sweet-sour balls.", "9.99"],
-                    ["Champignons Croustillants / Crispy Mushrooms", "Champignons frits croustillants / Crispy fried mushrooms.", "9.99"],
-                    ["Soya Chaap Malai / Malai Soya Chaap", "Soya chaap crémeux / Creamy soya chaap.", "13.99"],
-                    ["Soya Chaap Achari / Achari Soya Chaap", "Soya chaap au pickle / Pickled soya chaap.", "12.99"],
-                    ["Soya Chaap Tandoori / Tandoori Soya Chaap", "Soya chaap tandoori / Tandoori soya chaap.", "11.99"],
-                    ["Paneer Tikka / Paneer Tikka", "Fromage grillé mariné / Marinated grilled cheese.", "13.99"],
-                    ["Paneer Tikka Achari / Achari Paneer Tikka", "Fromage grillé au pickle / Pickled grilled cheese.", "12.99"],
-                    ["Paneer Tikka Malai / Malai Paneer Tikka", "Fromage grillé crémeux / Creamy grilled cheese.", "14.99"],
-                    ["Seekh Kabab / Seekh Kebab", "Brochettes de viande hachée / Minced meat skewers.", "8.99"],
-                    ["Reshmi Kabab / Reshmi Kebab", "Brochettes crémeuses / Creamy skewers.", "8.99"],
-                    ["Kabab Spécial Bombay / Bombay Special Kabab", "Kabab signature de Bombay / Bombay special kebab.", "17.99"],
-                    ["Rouleaux de Printemps / Spring Roll", "Rouleaux croustillants farcis / Crispy stuffed rolls.", "4.99"],
-                    ["Bhaji aux Oignons / Onions Bhaji", "Beignets d'oignons / Onion fritters.", "5.99"],
-                    ["Chana Bhatura / Chana Bhatura", "Pois chiches avec pain frit / Chickpeas with fried bread.", "6.99"],
-                    ["Poisson Lahori / Lahori Fish", "Poisson frit à la Lahori / Lahori fried fish.", "13.99"],
-                    ["Chilli Paneer / Chilli Paneer", "Fromage aux piments / Spicy cheese.", "11.99"],
-                    ["Poulet Manchurian / Chicken Manchurian", "Poulet sauce aigre-douce / Sweet-sour chicken.", "12.99"],
-                    ["Gobi Manchurian / Gobi Manchurian", "Chou-fleur sauce aigre-douce / Sweet-sour cauliflower.", "9.99"],
-                    ["Halwa Puri / Halwa Puri", "Pain frit avec halwa / Fried bread with pudding.", "6.99"],
-                    ["Wrap au Poulet / Chicken Wrap", "Wrap au poulet / Chicken wrap.", "5.99"],
-                    ["Wrap au Fromage / Paneer Wrap", "Wrap au fromage / Cheese wrap.", "5.99"],
-                    ["Wrap Végétal / Veggie Wrap", "Wrap végétarien / Veggie wrap.", "4.99"],
-                    ["Wrap au Bœuf / Beef Wrap", "Wrap au bœuf / Beef wrap.", "4.99"],
-                    ["Poulet Tandoori Hall's / Half Tandoori Chicken", "Demi poulet tandoori / Half tandoori chicken.", "19.99"],
-                    ["Demi-Poulet Tandoori / Half Chicken Tandoori", "Demi poulet mariné grillé / Half marinated grilled chicken.", "10.99"],
-                    ["Poitrine de Poulet / Chicken Breast", "Poitrine de poulet grillée / Grilled chicken breast.", "5.99"],
-                    ["Cuisse de Poulet / Chicken Leg", "Cuisse de poulet grillée / Grilled chicken leg.", "4.99"],
+                    ["Soupe Dal / Dal Soup", "Soupe de lentilles épicées / Spiced lentil soup.", "$3.99"],
+                    ["Soupe Schezwan Poulet & Maïs (Petit) / Schezwan Chicken & Corn Soup (Small)", "Soupe épicée au poulet et maïs / Spicy chicken and corn soup.", "$6.99"],
+                    ["Soupe Schezwan Poulet & Maïs (Complet) / Schezwan Chicken & Corn Soup (Full)", "Soupe épicée au poulet et maïs / Spicy chicken and corn soup.", "$21.99"],
+                    ["Soupe Spéciale du Chef (Petit) / Chef's Special Soup (Small)", "Soupe signature du chef / Chef's signature soup.", "$7.99"],
+                    ["Soupe Spéciale du Chef (Complet) / Chef's Special Soup (Full)", "Soupe signature du chef / Chef's signature soup.", "$22.99"],
+                    ["Nouilles au Poulet (Petit) / Chicken Noodles (Small)", "Nouilles sautées au poulet / Stir-fried chicken noodles.", "$12.99"],
+                    ["Nouilles au Poulet (Complet) / Chicken Noodles (Full)", "Nouilles sautées au poulet / Stir-fried chicken noodles.", "$22.99"],
+                    ["Nouilles Végétales (Petit) / Vegetable Noodles (Small)", "Nouilles sautées aux légumes / Stir-fried vegetable noodles.", "$12.99"],
+                    ["Nouilles Végétales (Complet) / Vegetable Noodles (Full)", "Nouilles sautées aux légumes / Stir-fried vegetable noodles.", "$22.99"],
+                    ["Poulet Dynamite / Dynamite Chicken", "Poulet frit épicé et croustillant / Spicy crispy fried chicken.", "$8.99"],
+                    ["Crevettes Dynamite / Dynamite Shrimp", "Crevettes frites épicées / Spicy crispy fried shrimp.", "$22.99"],
+                    ["Ailes au Miel / Honey Wings", "Ailes de poulet au miel et épices / Honey-glazed chicken wings.", "$19.99"],
+                    ["Momos Poulet Vapeur / Chicken Steam Momos", "Boulettes de poulet vapeur / Steamed chicken dumplings.", "$12.99"],
+                    ["Momos Poulet Tandoori / Chicken Tandoori Momos", "Boulettes de poulet tandoori / Tandoori chicken dumplings.", "$13.99"],
+                    ["Momos Poulet Manchurian / Chicken Manchurian Momos", "Boulettes de poulet sauce manchurian / Manchurian chicken dumplings.", "$14.99"],
+                    ["Burger Zinger / Zinger Burger", "Burger de poulet épicé / Spicy chicken burger.", "$12.99"],
+                    ["Burger Végétal / Veggie Burger", "Burger végétarien / Vegetarian burger.", "$6.99"],
+                    ["Burger Trio / Trio Burger", "Burger triple saveur / Triple-flavor burger.", "$15.99"],
+                    ["Burger aux Nouilles / Noodle Burger", "Burger aux nouilles / Noodle burger.", "$8.99"],
+                    ["Aloo Tiki / Aloo Tikki", "Beignets de pommes de terre épicés / Spiced potato patties.", "$4.99"],
+                    ["Chana Samosa / Chana Samosa", "Samosas aux pois chiches / Chickpea samosas.", "$4.99"],
+                    ["Bombay Bhel Puri / Bombay Bhel Puri", "Salade croustillante de Bombay / Crispy Bombay salad.", "$4.99"],
+                    ["Bombay Chatt Papri / Bombay Chaat Papri", "Chaat croustillant de Bombay / Crispy Bombay chaat.", "$4.99"],
+                    ["Pani Puri / Pani Puri", "Boules croustillantes farcies / Stuffed crispy balls.", "$4.99"],
+                    ["Dahi Phalla / Dahi Bhalla", "Boulettes de lentilles au yaourt / Yogurt lentil fritters.", "$5.99"],
+                    ["Pakora Végétarien / Vegetarian Pakora", "Beignets de légumes / Vegetable fritters.", "$6.99"],
+                    ["Pakora au Fromage / Paneer Pakora (Cheese)", "Beignets de fromage paneer / Cheese paneer fritters.", "$9.99"],
+                    ["Pakora aux Crevettes / Shrimp Pakora", "Beignets de crevettes / Shrimp fritters.", "$19.99"],
+                    ["Manchurian / Manchurian", "Boulettes sauce aigre-douce / Sweet-sour balls.", "$9.99"],
+                    ["Champignons Croustillants / Crispy Mushrooms", "Champignons frits croustillants / Crispy fried mushrooms.", "$9.99"],
+                    ["Soya Chaap Malai / Malai Soya Chaap", "Soya chaap crémeux / Creamy soya chaap.", "$13.99"],
+                    ["Soya Chaap Achari / Achari Soya Chaap", "Soya chaap au pickle / Pickled soya chaap.", "$12.99"],
+                    ["Soya Chaap Tandoori / Tandoori Soya Chaap", "Soya chaap tandoori / Tandoori soya chaap.", "$11.99"],
+                    ["Paneer Tikka / Paneer Tikka", "Fromage grillé mariné / Marinated grilled cheese.", "$13.99"],
+                    ["Paneer Tikka Achari / Achari Paneer Tikka", "Fromage grillé au pickle / Pickled grilled cheese.", "$12.99"],
+                    ["Paneer Tikka Malai / Malai Paneer Tikka", "Fromage grillé crémeux / Creamy grilled cheese.", "$14.99"],
+                    ["Seekh Kabab / Seekh Kebab", "Brochettes de viande hachée / Minced meat skewers.", "$8.99"],
+                    ["Reshmi Kabab / Reshmi Kebab", "Brochettes crémeuses / Creamy skewers.", "$8.99"],
+                    ["Kabab Spécial Bombay / Bombay Special Kabab", "Kabab signature de Bombay / Bombay special kebab.", "$17.99"],
+                    ["Rouleaux de Printemps / Spring Roll", "Rouleaux croustillants farcis / Crispy stuffed rolls.", "$4.99"],
+                    ["Bhaji aux Oignons / Onions Bhaji", "Beignets d'oignons / Onion fritters.", "$5.99"],
+                    ["Chana Bhatura / Chana Bhatura", "Pois chiches avec pain frit / Chickpeas with fried bread.", "$6.99"],
+                    ["Poisson Lahori / Lahori Fish", "Poisson frit à la Lahori / Lahori fried fish.", "$13.99"],
+                    ["Chilli Paneer / Chilli Paneer", "Fromage aux piments / Spicy cheese.", "$11.99"],
+                    ["Poulet Manchurian / Chicken Manchurian", "Poulet sauce aigre-douce / Sweet-sour chicken.", "$12.99"],
+                    ["Gobi Manchurian / Gobi Manchurian", "Chou-fleur sauce aigre-douce / Sweet-sour cauliflower.", "$9.99"],
+                    ["Halwa Puri / Halwa Puri", "Pain frit avec halwa / Fried bread with pudding.", "$6.99"],
+                    ["Wrap au Poulet / Chicken Wrap", "Wrap au poulet / Chicken wrap.", "$5.99"],
+                    ["Wrap au Fromage / Paneer Wrap", "Wrap au fromage / Cheese wrap.", "$5.99"],
+                    ["Wrap Végétal / Veggie Wrap", "Wrap végétarien / Veggie wrap.", "$4.99"],
+                    ["Wrap au Bœuf / Beef Wrap", "Wrap au bœuf / Beef wrap.", "$4.99"],
+                    ["Poulet Tandoori Hall's / Half Tandoori Chicken", "Demi poulet tandoori / Half tandoori chicken.", "$19.99"],
+                    ["Demi-Poulet Tandoori / Half Chicken Tandoori", "Demi poulet mariné grillé / Half marinated grilled chicken.", "$10.99"],
+                    ["Poitrine de Poulet / Chicken Breast", "Poitrine de poulet grillée / Grilled chicken breast.", "$5.99"],
+                    ["Cuisse de Poulet / Chicken Leg", "Cuisse de poulet grillée / Grilled chicken leg.", "$4.99"],
                 ];
                 const appetizerList = document.getElementById('appetizers-list');
+                appetizerList.innerHTML = '';
                 appetizersData.forEach(item => {
                     appetizerList.innerHTML += createMenuItem(item[0], item[1], `$${item[2]}`);
                 });
             </script>
         </section>
 
+        <!-- VEGETARIAN DISHES --><section class="mb-10">
+            <h2 class="section-title text-3xl font-bold mb-6 pt-4 text-orange-500">
+                PLATS VÉGÉTARIENS / VEGETARIAN DISHES
+            </h2>
+            <div id="vegetarian-dishes-list" class="grid md:grid-cols-2 gap-x-10 gap-y-4">
+                <!-- Data will be populated here --></div>
+            <script>
+                const vegetarianDishesData = [
+                    ["Aloo Gobi / Aloo Gobi", "Choux-fleur, pommes de terre, tomates, gingembre, ail & épices indiennes.", "$9.99"],
+                    ["Aubergine Bharta / Eggplant Bharta", "Aubergine avec tomates, gingembre, ail & épices indiennes.", "$9.99"],
+                    ["Bhindi Bhaji / Bhindi Bhaji", "Okra frais cuit à l'indienne.", "$11.99"],
+                    ["Daal Makhni / Daal Makhni", "Mélange de lentilles, ail, gingembre, beurre, crème & épices indiennes.", "$10.99"],
+                    ["Daal Tarka / Daal Tarka", "Mélange de lentilles avec gingembre.", "$9.99"],
+                    ["Shahi Paneer / Shahi Paneer", "Sauce tomates, crème, fromage, gingembre, ail.", "$12.99"],
+                    ["Chana Masala / Chana Masala", "Pois chiches, tomates, gingembre, ail & épices indiennes.", "$9.99"],
+                    ["Mix Végétarienne / Mixed Vegetable", "Légumes frais, tomates, gingembre, ail & épices indiennes.", "$9.99"],
+                    ["Korma aux Légumes / Veg Korma", "Légumes, crème, épices.", "$11.99"],
+                    ["Malai Kofta / Malai Kofta", "Morceaux de fromage avec tomates, crème, ail, gingembre et épices.", "$12.99"],
+                    ["Palak Paneer / Palak Paneer", "Épinards frais, oignons, fromage, gingembre, ail et épices.", "$11.99"],
+                    ["Sarson Ka Saag / Sarson Ka Saag", "Épinards frais, moutarde, gingembre, ail et épices.", "$11.99"],
+                    ["Aloo Mattar / Aloo Mattar", "Pois verts, pomme de terre, tomates, gingembre, ail et épices.", "$11.99"],
+                    ["Aloo Palak / Aloo Palak", "Épinards cuits avec pommes de terre, tomates et épices.", "$11.99"],
+                    ["Mattar Paneer / Mattar Paneer", "Pois verts, fromages, tomates, gingembre, ail, épices.", "$11.99"],
+                    ["Piment Fromage - Chilli Cheese / Chilli Cheese", "Fromage avec piments verts, oignons, piments forts.", "$11.99"],
+                    ["Champignons Fromage / Mushroom Cheese", "Fromage cuit avec oignons, piments verts, épices.", "$11.99"],
+                    ["Tomate et Fromage / Tomato and Paneer", "Fromage, tomates, oignons, ail, gingembre, épices.", "$11.99"],
+                    ["Paneer Jalfrazie / Paneer Jalfrezi", "Fromage cuit avec oignons, piments verts, épices.", "$11.99"],
+                    ["Champignons Balti / Mushroom Balti", "Champignons frais, ail, gingembre, oignons cuits avec sauce tomates.", "$11.99"],
+                    ["Paneer Tikka Masala / Paneer Tikka Masala", "Fromage, piments verts, oignons cuits dans une sauce crème.", "$11.99"],
+                    ["Paneer Manchurian / Paneer Manchurian", "Fromage frais avec piments verts, oignons et épices.", "$11.99"],
+                    ["Paneer Korma / Paneer Korma", "Fromage frais avec une sauce crémeuse.", "$11.99"],
+                    ["Paneer Purji / Paneer Bhurji", "Fromage, oignons, tomates.", "$11.99"],
+                    ["Paneer Butter Masala / Paneer Butter Masala", "Fromage, oignons, sauce crémeuse, épices.", "$11.99"],
+                    ["Paneer Tikka / Paneer Tikka", "Fromage, piments verts, oignons.", "$11.99"],
+                    ["Sarson da Saag with Paneer / Sarson da Saag with Paneer", "Sarson da Saag avec fromage Paneer.", "$11.99"],
+                ];
+                const vegetarianDishesList = document.getElementById('vegetarian-dishes-list');
+                vegetarianDishesList.innerHTML = '';
+                vegetarianDishesData.forEach(item => {
+                    vegetarianDishesList.innerHTML += createMenuItem(item[0], item[1], `$${item[2]}`);
+                });
+            </script>
+        </section>
 
-        <!-- VE
+        <!-- MEAT DISHES --><section class="mb-10">
+            <h2 class="section-title text-3xl font-bold mb-6 pt-4 text-orange-500">
+                PLATS DE VIANDES / MEAT DISHES
+            </h2>
+
+            <!-- Curries & Masalas --><h3 class="text-2xl font-semibold mb-4 text-gray-200">Curries & Masalas</h3>
+            <div id="curries-masalas-list" class="grid md:grid-cols-2 gap-x-10 gap-y-4">
+                <!-- Data will be populated here --></div>
+            <script>
+                const curriesMasalasData = [
+                    ["1. Poulet Curry Désossé / Boneless Chicken Curry", "Poulet désossé avec oignons, tomates, gingembre, ail et épices.", "$14.99"],
+                    ["2. Korma au Poulet / Chicken Korma", "Poulet cuit avec tomates, crème, gingembre, ail et épices.", "$14.99"],
+                    ["3. Bhuna au Poulet / Chicken Bhuna", "Poulet désossé cuit avec piments verts, oignons, tomates et épices.", "$14.99"],
+                    ["4. Balti au Poulet / Chicken Balti", "Poulet désossé cuit avec tomates, gingembre, coriandre, ail, épices.", "$14.99"],
+                    ["5. Manchurian au Poulet / Chicken Manchurian", "Poulet avec oignons, tomates, sauce aigre-douce et épices.", "$14.99"],
+                    ["6. Jalfrazie au Poulet / Chicken Jalfrezi", "Poulet avec oignons, piments verts, tomates, gingembre, ail et épices.", "$14.99"],
+                    ["7. Poulet Vindaloo / Chicken Vindaloo", "Poulet avec pomme de terre, gingembre, ail, épices.", "$14.99"],
+                    ["8. Poulet Tikka Masala / Chicken Tikka Masala", "Poulet désossé dans un curry avec oignons, piments verts, gingembre, crème, ail, épices.", "$14.99"],
+                    ["9. Poulet au Beurre - Butter Chicken / Butter Chicken", "Poulet cuit dans un four d'argile avec sauce aux tomates et crème.", "$14.99"],
+                    ["10. Poulet Chilli / Chicken Chilli", "Poulet frit avec oignons, gingembre, ail, piment et sauce.", "$14.99"],
+                ];
+                const curriesMasalasList = document.getElementById('curries-masalas-list');
+                curriesMasalasList.innerHTML = '';
+                curriesMasalasData.forEach(item => {
+                    curriesMasalasList.innerHTML += createMenuItem(item[0], item[1], `$${item[2]}`);
+                });
+            </script>
+
+            <!-- Lamb & Other Specialties --><h3 class="text-2xl font-semibold mb-4 mt-8 text-gray-200">Agneau & Autres Spécialités / Lamb & Other Specialties</h3>
+            <div id="lamb-specialties-list" class="grid md:grid-cols-2 gap-x-10 gap-y-4">
+                <!-- Data will be populated here --></div>
+            <script>
+                const lambSpecialtiesData = [
+                    ["11. Poulet Saag / Chicken Saag", "Épinards et poulet.", "$15.99"],
+                    ["12. Curry de Mouton ou d'Agneau / Mutton or Lamb Curry", "Agneau, oignons, tomates, gingembre, ail et épices.", "$15.99"],
+                    ["13. Bhuna Ghosht / Bhuna Gosht", "Chèvre cuit avec tomates, oignons, piments et épices.", "$15.99"],
+                    ["14. Mutton Balti / Mutton Balti", "Mouton Balti.", "$15.99"],
+                    ["15. Mutton Palak / Mutton Palak", "Mouton avec épinards.", "$15.99"],
+                    ["16. Malai Kabab / Malai Kebab", "Poulet cuit avec tomates, crème, gingembre, ail.", "$15.99"],
+                    ["17. Kabab Balti / Kebab Balti", "Kabab Balti.", "$15.99"],
+                    ["18. Poulet Achar / Chicken Achar", "Poulet mariné.", "$15.99"],
+                    ["19. Goat Achar / Goat Achar", "Chèvre mariné.", "$15.99"],
+                    ["20. Poulet aux Poivre Noir / Black Pepper Chicken", "Poulet au poivre noir.", "$15.99"],
+                    ["21. Poulet à la Mangue / Mango Chicken", "Poulet à la mangue.", "$15.99"],
+                    ["22. Poulet Dhansak / Chicken Dhansak", "Poulet Dhansak.", "$15.99"],
+                    ["23. Keema Curry / Keema Curry", "Keema Curry.", "$15.99"],
+                    ["24. Agneau Tikka Masala / Lamb Tikka Masala", "Agneau Tikka Masala.", "$15.99"],
+                    ["25. Roganjosh / Rogan Josh", "Roganjosh.", "$15.99"],
+                    ["26. Lamb Korma d'Agneau / Lamb Korma", "Korma d'Agneau.", "$15.99"],
+                ];
+                const lambSpecialtiesList = document.getElementById('lamb-specialties-list');
+                lambSpecialtiesList.innerHTML = '';
+                lambSpecialtiesData.forEach(item => {
+                    lambSpecialtiesList.innerHTML += createMenuItem(item[0], item[1], `$${item[2]}`);
+                });
+            </script>
+        </section>
+
+        <!-- SEAFOOD --><section class="mb-10">
+            <h2 class="section-title text-3xl font-bold mb-6 pt-4 text-orange-500">
+                FRUITS DE MER / SEAFOOD
+            </h2>
+            <div id="seafood-list" class="grid md:grid-cols-2 gap-x-10 gap-y-4">
+                <!-- Data will be populated here --></div>
+            <script>
+                const seafoodData = [
+                    ["1. Curry au Poisson / Fish Curry", "Poisson cuit dans sauce curry / Fish in curry sauce.", "$17.99"],
+                    ["2. Balti au Poisson / Fish Balti", "Poisson en sauce balti épicée / Fish in spicy balti sauce.", "$17.99"],
+                    ["3. Tikka Masala au Poisson / Fish Tikka Masala", "Poisson mariné dans sauce tikka / Marinated fish in tikka sauce.", "$17.99"],
+                    ["4. Balti aux Crevettes / Shrimp Balti", "Crevettes en sauce balti / Shrimp in balti sauce.", "$17.99"],
+                    ["5. Masala aux Crevettes / Shrimp Masala", "Crevettes dans sauce masala / Shrimp in masala sauce.", "$17.99"],
+                    ["6. Curry aux Crevettes / Shrimp Curry", "Crevettes cuites dans curry / Shrimp in curry.", "$17.99"],
+                    ["7. Chilli Poisson / Chilli Fish", "Poisson aux piments / Spicy chili fish.", "$17.99"],
+                ];
+                const seafoodList = document.getElementById('seafood-list');
+                seafoodList.innerHTML = '';
+                seafoodData.forEach(item => {
+                    seafoodList.innerHTML += createMenuItem(item[0], item[1], `$${item[2]}`);
+                });
+            </script>
+        </section>
+
+        <!-- TANDOORI & SOYA CHAAP --><section class="mb-10">
+            <h2 class="section-title text-3xl font-bold mb-6 pt-4 text-orange-500">
+                TANDOORI & SOYA CHAAP SPECIALTIES
+            </h2>
+
+            <!-- Tandoori --><h3 class="text-2xl font-semibold mb-4 text-gray-200">Tandoori</h3>
+            <div id="tandoori-list" class="grid md:grid-cols-2 gap-x-10 gap-y-4">
+                <!-- Data will be populated here --></div>
+            <script>
+                const tandooriData = [
+                    ["1. Poulet Complet / Full Chicken", "Poulet complet cuit au Tandoor.", "$24.99"],
+                    ["3. Demi Poulet / Half Chicken", "Demi-poulet cuit au Tandoor.", "$12.99"],
+                    ["5. Tikka Poulet / Chicken Tikka", "Morceaux de poulet marinés et grillés.", "$15.99"],
+                    ["8. Tikka au Poisson / Fish Tikka", "Morceaux de poisson marinés et grillés.", "$15.99"],
+                    ["9. Kebab Poulet / Chicken Kebab", "Kebab de poulet.", "$15.99"],
+                ];
+                const tandooriList = document.getElementById('tandoori-list');
+                tandooriList.innerHTML = '';
+                tandooriData.forEach(item => {
+                    tandooriList.innerHTML += createMenuItem(item[0], item[1], `$${item[2]}`);
+                });
+            </script>
+
+            <!-- Soya Chaap --><h3 class="text-2xl font-semibold mb-4 mt-8 text-gray-200">Soya Chaap</h3>
+            <div id="soya-chaap-list" class="grid md:grid-cols-2 gap-x-10 gap-y-4">
+                <!-- Data will be populated here --></div>
+            <script>
+                const soyaChaapData = [
+                    ["1. Soya Chaap Malai Tikka / Malai Soya Chaap Tikka", "Soya Chaap Malai Tikka.", "$13.99"],
+                    ["2. Soya Chaap Tikka / Soya Chaap Tikka", "Soya Chaap Tikka.", "$12.99"],
+                    ["3. Soya Chaap Tikka Masala / Soya Chaap Tikka Masala", "Soya Chaap Tikka Masala.", "$14.99"],
+                    ["4. Shahi Soya Chaap Masala / Shahi Soya Chaap Masala", "Shahi Soya Chaap Masala.", "$14.99"],
+                    ["5. Chilli Soya Chaap / Chilli Soya Chaap", "Chilli Soya Chaap.", "$14.99"],
+                ];
+                const soyaChaapList = document.getElementById('soya-chaap-list');
+                soyaChaapList.innerHTML = '';
+                soyaChaapData.forEach(item => {
+                    soyaChaapList.innerHTML += createMenuItem(item[0], item[1], `$${item[2]}`);
+                });
+            </script>
+        </section>
+
+        <!-- RIZ, PAINS & EXTRAS --><section class="mb-10">
+            <h2 class="section-title text-3xl font-bold mb-6 pt-4 text-orange-500">
+                RIZ, PAINS & EXTRAS / RICE, BREADS & SIDES
+            </h2>
+
+            <!-- Les Riz - Rice --><h3 class="text-2xl font-semibold mb-4 text-gray-200">Les Riz / Rice</h3>
+            <div id="rice-list" class="grid md:grid-cols-2 gap-x-10 gap-y-4">
+                <!-- Data will be populated here --></div>
+            <script>
+                const riceData = [
+                    ["1. Riz / Rice", "Riz simple.", "$4.99"],
+                    ["2. Pilow Végétarien / Vegetable Pilaf", "Riz aux légumes épicés / Spiced vegetable rice.", "$7.99"],
+                    ["3. Matter Pilow / Mattar Pilaf", "Riz aux pois verts / Green pea rice.", "$7.99"],
+                    ["4. Biryani Végétarien / Vegetable Biryani", "Biryani aux légumes / Vegetable biryani.", "$9.99"],
+                    ["5. Biryani au Poulet / Chicken Biryani", "Biryani au poulet / Chicken biryani.", "$12.99"],
+                    ["6. Biryani à l'Agneau / Lamb Biryani", "Biryani à l'agneau / Lamb biryani.", "$15.99"],
+                    ["7. Biryiani au Mouton / Mutton Biryani", "Biryani au mouton / Mutton biryani.", "$15.99"],
+                    ["8. Biryani aux Crevettes / Shrimp Biryani", "Biryani aux crevettes / Shrimp biryani.", "$15.99"],
+                    ["9. Biryani au Poisson / Fish Biryani", "Biryani au poisson / Fish biryani.", "$15.99"],
+                    ["10. Super Special Byriani (avec os) / Super Special Biryani (with bone)", "Super spécial avec os (with bone).", "$8.99"],
+                ];
+                const riceList = document.getElementById('rice-list');
+                riceList.innerHTML = '';
+                riceData.forEach(item => {
+                    riceList.innerHTML += createMenuItem(item[0], item[1], `$${item[2]}`);
+                });
+            </script>
+
+            <!-- Les Pains - Breads --><h3 class="text-2xl font-semibold mb-4 mt-8 text-gray-200">Les Pains / Breads</h3>
+            <div id="breads-list" class="grid md:grid-cols-2 gap-x-10 gap-y-4">
+                <!-- Data will be populated here --></div>
+            <script>
+                const breadsData = [
+                    ["13. Naan / Naan", "Naan classique.", "$2.99"],
+                    ["16. Butter Naan / Butter Naan", "Naan au beurre.", "$2.99"],
+                    ["14. Naan au Fromage / Cheese Naan", "Naan fourré au fromage / Cheese stuffed naan.", "$4.99"],
+                    ["15. Naan à l'Ail / Garlic Naan", "Naan à l'ail frais / Fresh garlic naan.", "$4.99"],
+                    ["19. Naan Piment & Coriandre / Chili Coriander Naan", "Naan au piment et coriandre / Chili coriander naan.", "$4.99"],
+                    ["20. Naan à la Coriandre / Coriander Naan", "Naan à la coriandre fraîche / Fresh coriander naan.", "$4.99"],
+                    ["1. Naan Pomme de Terre / Potato Naan", "Naan fourré aux pommes de terre / Potato stuffed naan.", "$4.99"],
+                    ["2. Oignon Kulcha / Onion Kulcha", "Kulcha aux oignons / Onion kulcha.", "$4.99"],
+                    ["3. Plain Parantha / Plain Paratha", "Parantha nature / Plain paratha.", "$4.99"],
+                    ["4. Naan au Poulet / Chicken Naan", "Naan fourré au poulet / Chicken stuffed naan.", "$4.99"],
+                    ["5. Aloo Parantha / Aloo Paratha", "Parantha aux pommes de terre / Potato paratha.", "$4.99"],
+                    ["6. Gobie Parantha / Gobi Paratha", "Parantha au chou-fleur / Cauliflower paratha.", "$4.99"],
+                    ["7. Lacha Parantha / Lacha Paratha", "Parantha en couches / Layered paratha.", "$4.99"],
+                    ["8. Lacha Pudina Parantha / Lacha Pudina Paratha", "Parantha en couches à la menthe / Mint layered paratha.", "$4.99"],
+                    ["9. Bhatura / Bhatura", "Pain frit moelleux / Fluffy fried bread.", "$4.99"],
+                    ["10. Puri / Puri", "Pain frit croustillant / Crispy fried bread.", "$4.99"],
+                    ["11. Maki Di Roti / Makki Di Roti", "Pain de maïs / Corn flatbread.", "$4.99"],
+                    ["12. Chapati / Chapati", "Pain plat de blé / Wheat flatbread.", "$4.99"],
+                    ["17. Naan Keema / Keema Naan", "Naan fourré à la viande hachée / Minced meat stuffed naan.", "$4.99"],
+                    ["18. Roti Tandoori Blé Entier / Whole Wheat Tandoori Roti", "Roti de blé entier tandoori / Whole wheat tandoori roti.", "$4.99"],
+                ];
+                const breadsList = document.getElementById('breads-list');
+                breadsList.innerHTML = '';
+                breadsData.forEach(item => {
+                    breadsList.innerHTML += createMenuItem(item[0], item[1], `$${item[2]}`);
+                });
+            </script>
+
+            <!-- Side order - Extras --><h3 class="text-2xl font-semibold mb-4 mt-8 text-gray-200">À-côtés / Side Order - Extras</h3>
+            <div id="extras-list" class="grid md:grid-cols-2 gap-x-10 gap-y-4">
+                <!-- Data will be populated here --></div>
+            <script>
+                const extrasData = [
+                    ["1. Raita / Raita", "Yaourt rafraîchissant aux concombres / Refreshing yogurt with cucumber.", "$2.99"],
+                    ["2. Salade du Chef / Chef Salad", "Salade fraîche mixte / Fresh mixed salad.", "$4.99"],
+                    ["3. Salade d'Oignons / Onion Salad", "Salade d'oignons épicés / Spiced onion salad.", "$4.99"],
+                    ["4. Papadum / Papadum", "Croustilles indiennes / Indian crisps.", "$2.99"],
+                    ["5. Chutney à la Mangue / Mango Chutney", "Chutney sucré à la mangue / Sweet mango chutney.", "$2.99"],
+                    ["6. Cornichons Mélangés / Mixed Pickles Achar", "Assortiment de pickles / Mixed pickle assortment.", "$2.99"],
+                    ["7. Katchumber Salade / Kachumber Salad", "Salade de concombres et tomates / Cucumber-tomato salad.", "$4.99"],
+                    ["8. Sauce à l'Ail / Garlic Sauce", "Sauce crémeuse à l'ail / Creamy garlic sauce.", "$2.99"],
+                    ["9. Sauce à la Menthe / Mint Sauce", "Sauce rafraîchissante à la menthe / Refreshing mint sauce.", "$2.99"],
+                ];
+                const extrasList = document.getElementById('extras-list');
+                extrasList.innerHTML = '';
+                extrasData.forEach(item => {
+                    extrasList.innerHTML += createMenuItem(item[0], item[1], `$${item[2]}`);
+                });
+            </script>
+        </section>
+
+        <!-- BBQ SIZZLERS & SPECIALS --><section class="mb-10">
+            <h2 class="section-title text-3xl font-bold mb-6 pt-4 text-orange-500">
+                PLATS SPÉCIAUX & BBQ SIZZLERS
+            </h2>
+
+            <!-- BBQ SIZZLERS --><h3 class="text-2xl font-semibold mb-4 text-gray-200">BBQ Sizzlers</h3>
+            <div id="bbq-sizzlers-list" class="space-y-4">
+                <!-- Data will be populated here --></div>
+            <script>
+                const bbqSizzlersData = [
+                    ["Plateau de Poulet / Chicken Platter", "Riz, légumes, Kabab de poulet, Malai Boti, Poulet Boti, Green Boti.", "$28.99"],
+                    ["Mini Plateau / Mini Platter", "Riz, légumes, Kabab de poulet, Kabab de bœuf, Malai Boti, Green Boti, Bœuf Bihari Boti.", "$39.99"],
+                    ["Plateau Familial / Family Platter", "Riz, légumes, Kabab de poulet, Kabab de bœuf, Green Boti, Malai Boti, Kabab de poulet Bihari, Kabab de bœuf Bihari, Côtelette d'agneau (Lamb Champ).", "$64.99"],
+                ];
+                const bbqSizzlersList = document.getElementById('bbq-sizzlers-list');
+                bbqSizzlersList.innerHTML = '';
+                bbqSizzlersData.forEach(item => {
+                    bbqSizzlersList.innerHTML += createMenuItem(item[0], item[1], `$${item[2]}`);
+                });
+            </script>
+
+            <!-- Specials --><h3 class="text-2xl font-semibold mb-4 mt-8 text-gray-200">Spéciaux Karahi</h3>
+            <div id="karahi-specials-list" class="space-y-4">
+                <!-- Data will be populated here --></div>
+            <script>
+                const karahiSpecialsData = [
+                    ["KARAHI AU POULET COMPLET (1kg) / FULL CHICKEN KARAHI (1kg)", "Poulet entier en sauce karahi / Full chicken karahi.", "$28.99"],
+                    ["KARAHI SHENWARI AU POULET (1kg) / SHENWARI CHICKEN KARAHI (1kg)", "Poulet shenwari en karahi / Shenwari chicken karahi.", "$28.99"],
+                    ["KARAHI LAHORI BUTT (1kg) / LAHORI BUTT KARAHI (1kg)", "Karahi lahori au poulet / Lahori butt chicken karahi.", "$39.99"],
+                    ["KARAHI DE CHEVREAU (1kg) / BABY GOAT KARAHI", "Chevreau entier en karahi / Whole baby goat karahi.", "$55.99"],
+                    ["KARAHI DE CHEVREAU (0.5kg) / BABY GOAT KARAHI", "Demi chevreau en karahi / Half baby goat karahi.", "$28.99"],
+                    ["KARAHI D'AGNEAU DÉSOSSÉ (1kg) / LAMB BONELESS KARAHI", "Agneau désossé en karahi / Boneless lamb karahi.", "$52.99"],
+                ];
+                const karahiSpecialsList = document.getElementById('karahi-specials-list');
+                karahiSpecialsList.innerHTML = '';
+                karahiSpecialsData.forEach(item => {
+                    karahiSpecialsList.innerHTML += createMenuItem(item[0], item[1], `$${item[2]}`);
+                });
+            </script>
+        </section>
+
+        <!-- MEAL COMBOS --><section class="mb-10">
+            <h2 class="section-title text-3xl font-bold mb-6 pt-4 text-orange-500">
+                FORMULES REPAS / MEAL COMBOS
+            </h2>
+            <p class="text-sm text-center text-gray-400 mb-6">
+                Repas équilibrés, portions individuelles complètes avec accompagnements. <br/> Perfectly balanced, single-serving meals complete with sides.
+            </p>
+
+            <div class="grid md:grid-cols-2 gap-x-10 gap-y-8">
+                <!-- Non-Vegetarian Combos --><div>
+                    <h3 class="text-2xl font-semibold mb-4 text-orange-400 border-b border-orange-700 pb-2">Non-Végétariens / Non-Vegetarian Combos</h3>
+                    <div class="space-y-6">
+                        <div class="border border-gray-700 rounded-lg p-4 hover:bg-gray-800 transition">
+                            <div class="flex justify-between items-center mb-2">
+                                <span class="text-xl font-bold text-gray-100">1. Combo Classique / Classic Combo</span>
+                                <span class="item-price text-2xl font-extrabold">$24.99</span>
+                            </div>
+                            <p class="text-sm item-description">Soupe aux lentilles, Pakora végétarien, Poulet Tandoori, Mouton Balti, Poulet au Piment. Servi avec Riz, Naan, Raita, Dessert.</p>
+                        </div>
+                        <div class="border border-gray-700 rounded-lg p-4 hover:bg-gray-800 transition">
+                            <div class="flex justify-between items-center mb-2">
+                                <span class="text-xl font-bold text-gray-100">2. Combo Poisson & Crevettes / Fish & Shrimp Combo</span>
+                                <span class="item-price text-2xl font-extrabold">$26.99</span>
+                            </div>
+                            <p class="text-sm item-description">Soupe aux lentilles, Pakora végétarien, Pakora au Poisson, Masala au Poisson, Crevettes au Curry. Servi avec Riz, Naan, Raita, Dessert.</p>
+                        </div>
+                        <div class="border border-gray-700 rounded-lg p-4 hover:bg-gray-800 transition">
+                            <div class="flex justify-between items-center mb-2">
+                                <span class="text-xl font-bold text-gray-100">3. Combo Agneau & Yaourt / Lamb & Yogurt Combo</span>
+                                <span class="item-price text-2xl font-extrabold">$22.99</span>
+                            </div>
+                            <p class="text-sm item-description">Soupe aux lentilles, Pakora végétarien, Poulet au Beurre, Curry Végétarien, Yaourt. Servi avec Riz, Naan, Dessert.</p>
+                        </div>
+                        <div class="border border-gray-700 rounded-lg p-4 hover:bg-gray-800 transition">
+                            <div class="flex justify-between items-center mb-2">
+                                <span class="text-xl font-bold text-gray-100">4. Combo Tandoori & Curry / Tandoori & Curry Combo</span>
+                                <span class="item-price text-2xl font-extrabold">$26.99</span>
+                            </div>
+                            <p class="text-sm item-description">Soupe aux lentilles, Poulet Tandoori, Seekh Kabab, Poulet Tikka, Poulet au Beurre, Curry Végétarien, Dessert.</p>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Vegetarian Combos --><div>
+                    <h3 class="text-2xl font-semibold mb-4 text-orange-400 border-b border-orange-700 pb-2">Végétariens / Vegetarian Combos</h3>
+                    <div class="space-y-6">
+                        <div class="border border-gray-700 rounded-lg p-4 hover:bg-gray-800 transition">
+                            <div class="flex justify-between items-center mb-2">
+                                <span class="text-xl font-bold text-gray-100">1. Curry Shahi Paneer / Shahi Paneer Curry</span>
+                                <span class="item-price text-2xl font-extrabold">$18.99</span>
+                            </div>
+                            <p class="text-sm item-description">Soupe aux lentilles, Samosa végétarien, Curry Végétarien, Shahi Paneer. Servi avec Raita, Riz, Dessert.</p>
+                        </div>
+                        <div class="border border-gray-700 rounded-lg p-4 hover:bg-gray-800 transition">
+                            <div class="flex justify-between items-center mb-2">
+                                <span class="text-xl font-bold text-gray-100">2. Curry Matar Paneer / Mattar Paneer Curry</span>
+                                <span class="item-price text-2xl font-extrabold">$18.99</span>
+                            </div>
+                            <p class="text-sm item-description">Soupe aux lentilles, Pakora végétarien, Curry Végétarien, Matar Paneer. Servi avec Raita, Naan, Riz, Dessert.</p>
+                        </div>
+                        <div class="border border-gray-700 rounded-lg p-4 hover:bg-gray-800 transition">
+                            <div class="flex justify-between items-center mb-2">
+                                <span class="text-xl font-bold text-gray-100">3. Curry Fromage & Piment / Cheese & Chili Curry</span>
+                                <span class="item-price text-2xl font-extrabold">$20.99</span>
+                            </div>
+                            <p class="text-sm item-description">Soupe aux lentilles, Pakora au Fromage, Chilli Cheese, Curry au Fromage. Servi avec Naan, Riz, Raita, Dessert.</p>
+                        </div>
+                        <div class="border border-gray-700 rounded-lg p-4 hover:bg-gray-800 transition">
+                            <div class="flex justify-between items-center mb-2">
+                                <span class="text-xl font-bold text-gray-100">4. Manchurian Végétarien / Vegetarian Manchurian</span>
+                                <span class="item-price text-2xl font-extrabold">$20.99</span>
+                            </div>
+                            <p class="text-sm item-description">Soupe aux lentilles, Samosa végétal, Malai Paneer, Veg. Manchurian. Servi avec Naan, Raita, Riz, Salade, Dessert.</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- DESSERTS ET BOISSONS --><section class="mb-10">
+            <h2 class="section-title text-3xl font-bold mb-6 pt-4 text-orange-500">
+                DESSERTS ET BOISSONS / SWEETS & BEVERAGES
+            </h2>
+
+            <div class="grid md:grid-cols-2 gap-x-10 gap-y-8">
+                <!-- Desserts (Sweets) --><div>
+                    <h3 class="text-2xl font-semibold mb-4 text-gray-200">Desserts (Sweets)</h3>
+                    <div id="desserts-list" class="space-y-2">
+                        <!-- Data will be populated here --></div>
+                    <script>
+                        const dessertsData = [
+                            ["1. Gulab Jaman / Gulab Jamun", "Boulettes de lait frites au sirop / Fried milk balls in syrup.", "$4.99"],
+                            ["2. Ras Malai / Rasmalai", "Fromage frais au lait sucré / Cheese in sweetened milk.", "$4.99"],
+                            ["3. Gajan Ka Halwa / Gajar Halwa", "Halwa de carottes / Carrot pudding.", "$4.99"],
+                        ];
+                        const dessertsList = document.getElementById('desserts-list');
+                        dessertsList.innerHTML = '';
+                        dessertsData.forEach(item => {
+                            dessertsList.innerHTML += createMenuItem(item[0], item[1], `$${item[2]}`);
+                        });
+                    </script>
+                </div>
+
+                <!-- Boissons (Beverages) --><div>
+                    <h3 class="text-2xl font-semibold mb-4 text-gray-200">Boissons (Beverages)</h3>
+                    <div id="beverages-list" class="space-y-2">
+                        <!-- Data will be populated here --></div>
+                    <script>
+                        const beveragesData = [
+                            ["1. Boisson Gazeuse / Soft Drink", "Boisson gazeuse / Soft drink.", "$2.99"],
+                            ["2. Jus de Fruits / Fruit Juice", "Jus frais de fruits / Fresh fruit juice.", "$2.99"],
+                            ["3. Lassi Sucré / Sweet Lassi", "Lassi sucré au yaourt / Sweet yogurt drink.", "$4.99"],
+                            ["4. Lassi Salé / Salted Lassi", "Lassi salé au yaourt / Salted yogurt drink.", "$4.99"],
+                            ["5. Lassi à la Mangue / Mango Lassi", "Lassi à la mangue / Mango yogurt drink.", "$5.99"],
+                            ["6. Frappé à la Mangue / Mango Shake", "Frappé crémeux à la mangue / Creamy mango shake.", "$5.99"],
+                            ["7. Thé au Masala / Masala Tea", "Thé épicé indien / Spiced Indian tea.", "$2.99"],
+                            ["8. Café au Lait / Coffee with Milk", "Café avec lait / Coffee with milk.", "$2.99"],
+                            ["9. Café / Coffee", "Café noir / Black coffee.", "$2.99"],
+                            ["10. Eau Perrier / Perrier Water", "Eau gazeuse Perrier / Perrier sparkling water.", "$3.99"],
+                            ["11. Eau Embouteillée / Bottled Water", "Eau minérale / Mineral water.", "$1.99"],
+                            ["12. Lait aux Amandes / Almond Milk", "Lait d'amande / Almond milk.", "$3.99"],
+                        ];
+                        const beveragesList = document.getElementById('beverages-list');
+                        beveragesList.innerHTML = '';
+                        beveragesData.forEach(item => {
+                            beveragesList.innerHTML += createMenuItem(item[0], item[1], `$${item[2]}`);
+                        });
+                    </script>
+                </div>
+            </div>
+        </section>
+
+        <!-- FOOTER --><footer class="text-center pt-8 border-t border-orange-600/50 mt-10">
+            <p class="text-sm text-gray-500">Merci de votre visite.</p>
+        </footer>
+
+    </div>
+
+</body>
+</html>
