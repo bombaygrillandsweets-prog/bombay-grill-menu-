@@ -1,592 +1,156 @@
-<!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01//EN" "http://www.w3.org/TR/html4/strict.dtd">
-<html>
+<!DOCTYPE html>
+<html lang="fr">
 <head>
-  <meta http-equiv="Content-Type" content="text/html; charset=utf-8">
-  <meta http-equiv="Content-Style-Type" content="text/css">
-  <title></title>
-  <meta name="Generator" content="Cocoa HTML Writer">
-  <meta name="CocoaVersion" content="2575.7">
-  <style type="text/css">
-    p.p1 {margin: 0.0px 0.0px 0.0px 0.0px; font: 13.3px Menlo; color: #000000; -webkit-text-stroke: #000000; background-color: #ffffff}
-    p.p2 {margin: 0.0px 0.0px 0.0px 0.0px; font: 13.3px Menlo; color: #000000; -webkit-text-stroke: #000000; background-color: #ffffff; min-height: 15.0px}
-    span.s1 {font-kerning: none}
-  </style>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Menu du Bombay Grill & Sweets : Cuisine indienne authentique et pâtisseries.">
+    <title>Menu - Bombay Grill & Sweets</title>
+    <script src="https://cdn.tailwindcss.com" defer></script>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@100..900&family=Playfair+Display:ital,wght@0,400..900;1,400..900&display=swap" rel="stylesheet">
+    <style>
+        /* Définition du thème de couleur et des polices */
+        :root {
+            --color-black: #1a1a1a;
+            --color-orange: #FF6600;
+            --color-light: #f5f5f5;
+        }
+        body {
+            font-family: 'Inter', sans-serif;
+            background-color: var(--color-black);
+            color: var(--color-light);
+            min-height: 100vh;
+        }
+        .menu-title {
+            font-family: 'Playfair Display', serif;
+            letter-spacing: 0.1em;
+        }
+        .section-title {
+            font-family: 'Playfair Display', serif;
+            border-bottom: 2px solid var(--color-orange);
+            letter-spacing: 0.05em;
+        }
+        .item-name {
+            font-weight: 600;
+        }
+        .item-price {
+            color: var(--color-orange);
+            font-family: 'Playfair Display', serif;
+        }
+        .item-description {
+            font-style: italic;
+            color: #ccc;
+            font-size: 0.875rem; /* text-sm */
+        }
+        /* Print styles for menu printing */
+        @media print {
+            body { background: white; color: black; }
+            .hover\:bg-gray-800:hover { background: none !important; }
+            section { margin-bottom: 1rem; page-break-inside: avoid; }
+            .grid { display: block !important; }
+            .border-b { border-bottom: 1px solid black; }
+        }
+    </style>
 </head>
-<body>
-<p class="p1"><span class="s1">&lt;!DOCTYPE html&gt;</span></p>
-<p class="p1"><span class="s1">&lt;html lang="fr"&gt;</span></p>
-<p class="p1"><span class="s1">&lt;head&gt;</span></p>
-<p class="p1"><span class="s1"><span class="Apple-converted-space">    </span>&lt;meta charset="UTF-8"&gt;</span></p>
-<p class="p1"><span class="s1"><span class="Apple-converted-space">    </span>&lt;meta name="viewport" content="width=device-width, initial-scale=1.0"&gt;</span></p>
-<p class="p1"><span class="s1"><span class="Apple-converted-space">    </span>&lt;meta name="description" content="Menu du Bombay Grill &amp; Sweets : Cuisine indienne authentique et pâtisseries."&gt;</span></p>
-<p class="p1"><span class="s1"><span class="Apple-converted-space">    </span>&lt;title&gt;Menu - Bombay Grill &amp; Sweets&lt;/title&gt;</span></p>
-<p class="p1"><span class="s1"><span class="Apple-converted-space">    </span>&lt;script src="https://cdn.tailwindcss.com" defer&gt;&lt;/script&gt;</span></p>
-<p class="p1"><span class="s1"><span class="Apple-converted-space">    </span>&lt;link href="https://fonts.googleapis.com/css2?family=Inter:wght@100..900&amp;family=Playfair+Display:ital,wght@0,400..900;1,400..900&amp;display=swap" rel="stylesheet"&gt;</span></p>
-<p class="p1"><span class="s1"><span class="Apple-converted-space">    </span>&lt;style&gt;</span></p>
-<p class="p1"><span class="s1"><span class="Apple-converted-space">        </span>/* Définition du thème de couleur et des polices */</span></p>
-<p class="p1"><span class="s1"><span class="Apple-converted-space">        </span>:root {</span></p>
-<p class="p1"><span class="s1"><span class="Apple-converted-space">            </span>--color-black: #1a1a1a;</span></p>
-<p class="p1"><span class="s1"><span class="Apple-converted-space">            </span>--color-orange: #FF6600;</span></p>
-<p class="p1"><span class="s1"><span class="Apple-converted-space">            </span>--color-light: #f5f5f5;</span></p>
-<p class="p1"><span class="s1"><span class="Apple-converted-space">        </span>}</span></p>
-<p class="p1"><span class="s1"><span class="Apple-converted-space">        </span>body {</span></p>
-<p class="p1"><span class="s1"><span class="Apple-converted-space">            </span>font-family: 'Inter', sans-serif;</span></p>
-<p class="p1"><span class="s1"><span class="Apple-converted-space">            </span>background-color: var(--color-black);</span></p>
-<p class="p1"><span class="s1"><span class="Apple-converted-space">            </span>color: var(--color-light);</span></p>
-<p class="p1"><span class="s1"><span class="Apple-converted-space">            </span>min-height: 100vh;</span></p>
-<p class="p1"><span class="s1"><span class="Apple-converted-space">        </span>}</span></p>
-<p class="p1"><span class="s1"><span class="Apple-converted-space">        </span>.menu-title {</span></p>
-<p class="p1"><span class="s1"><span class="Apple-converted-space">            </span>font-family: 'Playfair Display', serif;</span></p>
-<p class="p1"><span class="s1"><span class="Apple-converted-space">            </span>letter-spacing: 0.1em;</span></p>
-<p class="p1"><span class="s1"><span class="Apple-converted-space">        </span>}</span></p>
-<p class="p1"><span class="s1"><span class="Apple-converted-space">        </span>.section-title {</span></p>
-<p class="p1"><span class="s1"><span class="Apple-converted-space">            </span>font-family: 'Playfair Display', serif;</span></p>
-<p class="p1"><span class="s1"><span class="Apple-converted-space">            </span>border-bottom: 2px solid var(--color-orange);</span></p>
-<p class="p1"><span class="s1"><span class="Apple-converted-space">            </span>letter-spacing: 0.05em;</span></p>
-<p class="p1"><span class="s1"><span class="Apple-converted-space">        </span>}</span></p>
-<p class="p1"><span class="s1"><span class="Apple-converted-space">        </span>.item-name {</span></p>
-<p class="p1"><span class="s1"><span class="Apple-converted-space">            </span>font-weight: 600;</span></p>
-<p class="p1"><span class="s1"><span class="Apple-converted-space">        </span>}</span></p>
-<p class="p1"><span class="s1"><span class="Apple-converted-space">        </span>.item-price {</span></p>
-<p class="p1"><span class="s1"><span class="Apple-converted-space">            </span>color: var(--color-orange);</span></p>
-<p class="p1"><span class="s1"><span class="Apple-converted-space">            </span>font-family: 'Playfair Display', serif;</span></p>
-<p class="p1"><span class="s1"><span class="Apple-converted-space">        </span>}</span></p>
-<p class="p1"><span class="s1"><span class="Apple-converted-space">        </span>.item-description {</span></p>
-<p class="p1"><span class="s1"><span class="Apple-converted-space">            </span>font-style: italic;</span></p>
-<p class="p1"><span class="s1"><span class="Apple-converted-space">            </span>color: #ccc;</span></p>
-<p class="p1"><span class="s1"><span class="Apple-converted-space">            </span>font-size: 0.875rem; /* text-sm */</span></p>
-<p class="p1"><span class="s1"><span class="Apple-converted-space">        </span>}</span></p>
-<p class="p1"><span class="s1"><span class="Apple-converted-space">        </span>/* Print styles for menu printing */</span></p>
-<p class="p1"><span class="s1"><span class="Apple-converted-space">        </span>@media print {</span></p>
-<p class="p1"><span class="s1"><span class="Apple-converted-space">            </span>body { background: white; color: black; }</span></p>
-<p class="p1"><span class="s1"><span class="Apple-converted-space">            </span>.hover\:bg-gray-800:hover { background: none !important; }</span></p>
-<p class="p1"><span class="s1"><span class="Apple-converted-space">            </span>section { margin-bottom: 1rem; page-break-inside: avoid; }</span></p>
-<p class="p1"><span class="s1"><span class="Apple-converted-space">            </span>.grid { display: block !important; }</span></p>
-<p class="p1"><span class="s1"><span class="Apple-converted-space">            </span>.border-b { border-bottom: 1px solid black; }</span></p>
-<p class="p1"><span class="s1"><span class="Apple-converted-space">        </span>}</span></p>
-<p class="p1"><span class="s1"><span class="Apple-converted-space">    </span>&lt;/style&gt;</span></p>
-<p class="p1"><span class="s1">&lt;/head&gt;</span></p>
-<p class="p1"><span class="s1">&lt;body class="p-4 sm:p-8"&gt;</span></p>
-<p class="p2"><span class="s1"></span><br></p>
-<p class="p1"><span class="s1"><span class="Apple-converted-space">    </span>&lt;div class="max-w-6xl mx-auto shadow-2xl bg-gray-900/90 rounded-xl p-6 sm:p-12 border border-orange-600/50"&gt;</span></p>
-<p class="p2"><span class="s1"></span><br></p>
-<p class="p1"><span class="s1"><span class="Apple-converted-space">        </span>&lt;!-- HEADER --&gt;&lt;header class="text-center mb-12"&gt;</span></p>
-<p class="p1"><span class="s1"><span class="Apple-converted-space">            </span>&lt;h1 class="menu-title text-5xl sm:text-7xl font-bold mb-6 text-orange-600"&gt;</span></p>
-<p class="p1"><span class="s1"><span class="Apple-converted-space">                </span>BOMBAY GRILL&lt;span class="text-gray-100"&gt;&amp;&lt;/span&gt;SWEETS</span></p>
-<p class="p1"><span class="s1"><span class="Apple-converted-space">            </span>&lt;/h1&gt;</span></p>
-<p class="p1"><span class="s1"><span class="Apple-converted-space">            </span>&lt;p class="text-lg text-gray-300 mb-4"&gt;</span></p>
-<p class="p1"><span class="s1"><span class="Apple-converted-space">                </span>Authentique Cuisine Indienne &amp; Pâtisseries &lt;br/&gt; Authentic Indian Cuisine &amp; Sweets</span></p>
-<p class="p1"><span class="s1"><span class="Apple-converted-space">            </span>&lt;/p&gt;</span></p>
-<p class="p1"><span class="s1"><span class="Apple-converted-space">            </span>&lt;p class="text-sm sm:text-base text-gray-400"&gt;</span></p>
-<p class="p1"><span class="s1"><span class="Apple-converted-space">                </span>4771 Sources Blvd, Pierrefonds, Quebec H8Y 3C6 | (514) 421-3522</span></p>
-<p class="p1"><span class="s1"><span class="Apple-converted-space">            </span>&lt;/p&gt;</span></p>
-<p class="p1"><span class="s1"><span class="Apple-converted-space">        </span>&lt;/header&gt;</span></p>
-<p class="p2"><span class="s1"></span><br></p>
-<p class="p1"><span class="s1"><span class="Apple-converted-space">        </span>&lt;!-- Menu Item Component Function --&gt;&lt;script&gt;</span></p>
-<p class="p1"><span class="s1"><span class="Apple-converted-space">            </span>function createMenuItem(name, description, price) {</span></p>
-<p class="p1"><span class="s1"><span class="Apple-converted-space">                </span>return `</span></p>
-<p class="p1"><span class="s1"><span class="Apple-converted-space">                    </span>&lt;div class="flex justify-between items-start py-3 border-b border-gray-700/50 hover:bg-gray-800/50 transition duration-300 px-2 rounded"&gt;</span></p>
-<p class="p1"><span class="s1"><span class="Apple-converted-space">                        </span>&lt;div class="flex flex-col pr-4"&gt;</span></p>
-<p class="p1"><span class="s1"><span class="Apple-converted-space">                            </span>&lt;span class="item-name text-lg text-gray-100"&gt;${name}&lt;/span&gt;</span></p>
-<p class="p1"><span class="s1"><span class="Apple-converted-space">                            </span>&lt;p class="item-description mt-0.5"&gt;${description}&lt;/p&gt;</span></p>
-<p class="p1"><span class="s1"><span class="Apple-converted-space">                        </span>&lt;/div&gt;</span></p>
-<p class="p1"><span class="s1"><span class="Apple-converted-space">                        </span>&lt;span class="item-price text-xl font-extrabold flex-shrink-0"&gt;${price}&lt;/span&gt;</span></p>
-<p class="p1"><span class="s1"><span class="Apple-converted-space">                    </span>&lt;/div&gt;</span></p>
-<p class="p1"><span class="s1"><span class="Apple-converted-space">                </span>`;</span></p>
-<p class="p1"><span class="s1"><span class="Apple-converted-space">            </span>}</span></p>
-<p class="p1"><span class="s1"><span class="Apple-converted-space">        </span>&lt;/script&gt;</span></p>
-<p class="p2"><span class="s1"></span><br></p>
-<p class="p1"><span class="s1"><span class="Apple-converted-space">        </span>&lt;!-- APPETIZERS --&gt;&lt;section class="mb-10"&gt;</span></p>
-<p class="p1"><span class="s1"><span class="Apple-converted-space">            </span>&lt;h2 class="section-title text-3xl font-bold mb-6 pt-4 text-orange-500"&gt;</span></p>
-<p class="p1"><span class="s1"><span class="Apple-converted-space">                </span>ENTRÉES / APPETIZERS</span></p>
-<p class="p1"><span class="s1"><span class="Apple-converted-space">            </span>&lt;/h2&gt;</span></p>
-<p class="p1"><span class="s1"><span class="Apple-converted-space">            </span>&lt;div id="appetizers-list" class="grid md:grid-cols-2 gap-x-10 gap-y-4"&gt;</span></p>
-<p class="p1"><span class="s1"><span class="Apple-converted-space">                </span>&lt;!-- Data will be populated here --&gt;&lt;/div&gt;</span></p>
-<p class="p1"><span class="s1"><span class="Apple-converted-space">            </span>&lt;script&gt;</span></p>
-<p class="p1"><span class="s1"><span class="Apple-converted-space">                </span>const appetizersData = [</span></p>
-<p class="p1"><span class="s1"><span class="Apple-converted-space">                    </span>["Soupe Dal / Dal Soup", "Soupe de lentilles épicées / Spiced lentil soup.", "3.99"],</span></p>
-<p class="p1"><span class="s1"><span class="Apple-converted-space">                    </span>["Soupe Schezwan Poulet &amp; Maïs (Petit) / Schezwan Chicken &amp; Corn Soup (Small)", "Soupe épicée au poulet et maïs / Spicy chicken and corn soup.", "6.99"],</span></p>
-<p class="p1"><span class="s1"><span class="Apple-converted-space">                    </span>["Soupe Schezwan Poulet &amp; Maïs (Complet) / Schezwan Chicken &amp; Corn Soup (Full)", "Soupe épicée au poulet et maïs / Spicy chicken and corn soup.", "21.99"],</span></p>
-<p class="p1"><span class="s1"><span class="Apple-converted-space">                    </span>["Soupe Spéciale du Chef (Petit) / Chef's Special Soup (Small)", "Soupe signature du chef / Chef's signature soup.", "7.99"],</span></p>
-<p class="p1"><span class="s1"><span class="Apple-converted-space">                    </span>["Soupe Spéciale du Chef (Complet) / Chef's Special Soup (Full)", "Soupe signature du chef / Chef's signature soup.", "22.99"],</span></p>
-<p class="p1"><span class="s1"><span class="Apple-converted-space">                    </span>["Nouilles au Poulet (Petit) / Chicken Noodles (Small)", "Nouilles sautées au poulet / Stir-fried chicken noodles.", "12.99"],</span></p>
-<p class="p1"><span class="s1"><span class="Apple-converted-space">                    </span>["Nouilles au Poulet (Complet) / Chicken Noodles (Full)", "Nouilles sautées au poulet / Stir-fried chicken noodles.", "22.99"],</span></p>
-<p class="p1"><span class="s1"><span class="Apple-converted-space">                    </span>["Nouilles Végétales (Petit) / Vegetable Noodles (Small)", "Nouilles sautées aux légumes / Stir-fried vegetable noodles.", "12.99"],</span></p>
-<p class="p1"><span class="s1"><span class="Apple-converted-space">                    </span>["Nouilles Végétales (Complet) / Vegetable Noodles (Full)", "Nouilles sautées aux légumes / Stir-fried vegetable noodles.", "22.99"],</span></p>
-<p class="p1"><span class="s1"><span class="Apple-converted-space">                    </span>["Poulet Dynamite / Dynamite Chicken", "Poulet frit épicé et croustillant / Spicy crispy fried chicken.", "8.99"],</span></p>
-<p class="p1"><span class="s1"><span class="Apple-converted-space">                    </span>["Crevettes Dynamite / Dynamite Shrimp", "Crevettes frites épicées / Spicy crispy fried shrimp.", "22.99"],</span></p>
-<p class="p1"><span class="s1"><span class="Apple-converted-space">                    </span>["Ailes au Miel / Honey Wings", "Ailes de poulet au miel et épices / Honey-glazed chicken wings.", "19.99"],</span></p>
-<p class="p1"><span class="s1"><span class="Apple-converted-space">                    </span>["Momos Poulet Vapeur / Chicken Steam Momos", "Boulettes de poulet vapeur / Steamed chicken dumplings.", "12.99"],</span></p>
-<p class="p1"><span class="s1"><span class="Apple-converted-space">                    </span>["Momos Poulet Tandoori / Chicken Tandoori Momos", "Boulettes de poulet tandoori / Tandoori chicken dumplings.", "13.99"],</span></p>
-<p class="p1"><span class="s1"><span class="Apple-converted-space">                    </span>["Momos Poulet Manchurian / Chicken Manchurian Momos", "Boulettes de poulet sauce manchurian / Manchurian chicken dumplings.", "14.99"],</span></p>
-<p class="p1"><span class="s1"><span class="Apple-converted-space">                    </span>["Burger Zinger / Zinger Burger", "Burger de poulet épicé / Spicy chicken burger.", "12.99"],</span></p>
-<p class="p1"><span class="s1"><span class="Apple-converted-space">                    </span>["Burger Végétal / Veggie Burger", "Burger végétarien / Vegetarian burger.", "6.99"],</span></p>
-<p class="p1"><span class="s1"><span class="Apple-converted-space">                    </span>["Burger Trio / Trio Burger", "Burger triple saveur / Triple-flavor burger.", "15.99"],</span></p>
-<p class="p1"><span class="s1"><span class="Apple-converted-space">                    </span>["Burger aux Nouilles / Noodle Burger", "Burger aux nouilles / Noodle burger.", "8.99"],</span></p>
-<p class="p1"><span class="s1"><span class="Apple-converted-space">                    </span>["Aloo Tiki / Aloo Tikki", "Beignets de pommes de terre épicés / Spiced potato patties.", "4.99"],</span></p>
-<p class="p1"><span class="s1"><span class="Apple-converted-space">                    </span>["Chana Samosa / Chana Samosa", "Samosas aux pois chiches / Chickpea samosas.", "4.99"],</span></p>
-<p class="p1"><span class="s1"><span class="Apple-converted-space">                    </span>["Bombay Bhel Puri / Bombay Bhel Puri", "Salade croustillante de Bombay / Crispy Bombay salad.", "4.99"],</span></p>
-<p class="p1"><span class="s1"><span class="Apple-converted-space">                    </span>["Bombay Chatt Papri / Bombay Chaat Papri", "Chaat croustillant de Bombay / Crispy Bombay chaat.", "4.99"],</span></p>
-<p class="p1"><span class="s1"><span class="Apple-converted-space">                    </span>["Pani Puri / Pani Puri", "Boules croustillantes farcies / Stuffed crispy balls.", "4.99"],</span></p>
-<p class="p1"><span class="s1"><span class="Apple-converted-space">                    </span>["Dahi Phalla / Dahi Bhalla", "Boulettes de lentilles au yaourt / Yogurt lentil fritters.", "5.99"],</span></p>
-<p class="p1"><span class="s1"><span class="Apple-converted-space">                    </span>["Pakora Végétarien / Vegetarian Pakora", "Beignets de légumes / Vegetable fritters.", "6.99"],</span></p>
-<p class="p1"><span class="s1"><span class="Apple-converted-space">                    </span>["Pakora au Fromage / Paneer Pakora (Cheese)", "Beignets de fromage paneer / Cheese paneer fritters.", "9.99"],</span></p>
-<p class="p1"><span class="s1"><span class="Apple-converted-space">                    </span>["Pakora aux Crevettes / Shrimp Pakora", "Beignets de crevettes / Shrimp fritters.", "19.99"],</span></p>
-<p class="p1"><span class="s1"><span class="Apple-converted-space">                    </span>["Manchurian / Manchurian", "Boulettes sauce aigre-douce / Sweet-sour balls.", "9.99"],</span></p>
-<p class="p1"><span class="s1"><span class="Apple-converted-space">                    </span>["Champignons Croustillants / Crispy Mushrooms", "Champignons frits croustillants / Crispy fried mushrooms.", "9.99"],</span></p>
-<p class="p1"><span class="s1"><span class="Apple-converted-space">                    </span>["Soya Chaap Malai / Malai Soya Chaap", "Soya chaap crémeux / Creamy soya chaap.", "13.99"],</span></p>
-<p class="p1"><span class="s1"><span class="Apple-converted-space">                    </span>["Soya Chaap Achari / Achari Soya Chaap", "Soya chaap au pickle / Pickled soya chaap.", "12.99"],</span></p>
-<p class="p1"><span class="s1"><span class="Apple-converted-space">                    </span>["Soya Chaap Tandoori / Tandoori Soya Chaap", "Soya chaap tandoori / Tandoori soya chaap.", "11.99"],</span></p>
-<p class="p1"><span class="s1"><span class="Apple-converted-space">                    </span>["Paneer Tikka / Paneer Tikka", "Fromage grillé mariné / Marinated grilled cheese.", "13.99"],</span></p>
-<p class="p1"><span class="s1"><span class="Apple-converted-space">                    </span>["Paneer Tikka Achari / Achari Paneer Tikka", "Fromage grillé au pickle / Pickled grilled cheese.", "12.99"],</span></p>
-<p class="p1"><span class="s1"><span class="Apple-converted-space">                    </span>["Paneer Tikka Malai / Malai Paneer Tikka", "Fromage grillé crémeux / Creamy grilled cheese.", "14.99"],</span></p>
-<p class="p1"><span class="s1"><span class="Apple-converted-space">                    </span>["Seekh Kabab / Seekh Kebab", "Brochettes de viande hachée / Minced meat skewers.", "8.99"],</span></p>
-<p class="p1"><span class="s1"><span class="Apple-converted-space">                    </span>["Reshmi Kabab / Reshmi Kebab", "Brochettes crémeuses / Creamy skewers.", "8.99"],</span></p>
-<p class="p1"><span class="s1"><span class="Apple-converted-space">                    </span>["Kabab Spécial Bombay / Bombay Special Kabab", "Kabab signature de Bombay / Bombay special kebab.", "17.99"],</span></p>
-<p class="p1"><span class="s1"><span class="Apple-converted-space">                    </span>["Rouleaux de Printemps / Spring Roll", "Rouleaux croustillants farcis / Crispy stuffed rolls.", "4.99"],</span></p>
-<p class="p1"><span class="s1"><span class="Apple-converted-space">                    </span>["Bhaji aux Oignons / Onions Bhaji", "Beignets d'oignons / Onion fritters.", "5.99"],</span></p>
-<p class="p1"><span class="s1"><span class="Apple-converted-space">                    </span>["Chana Bhatura / Chana Bhatura", "Pois chiches avec pain frit / Chickpeas with fried bread.", "6.99"],</span></p>
-<p class="p1"><span class="s1"><span class="Apple-converted-space">                    </span>["Poisson Lahori / Lahori Fish", "Poisson frit à la Lahori / Lahori fried fish.", "13.99"],</span></p>
-<p class="p1"><span class="s1"><span class="Apple-converted-space">                    </span>["Chilli Paneer / Chilli Paneer", "Fromage aux piments / Spicy cheese.", "11.99"],</span></p>
-<p class="p1"><span class="s1"><span class="Apple-converted-space">                    </span>["Poulet Manchurian / Chicken Manchurian", "Poulet sauce aigre-douce / Sweet-sour chicken.", "12.99"],</span></p>
-<p class="p1"><span class="s1"><span class="Apple-converted-space">                    </span>["Gobi Manchurian / Gobi Manchurian", "Chou-fleur sauce aigre-douce / Sweet-sour cauliflower.", "9.99"],</span></p>
-<p class="p1"><span class="s1"><span class="Apple-converted-space">                    </span>["Halwa Puri / Halwa Puri", "Pain frit avec halwa / Fried bread with pudding.", "6.99"],</span></p>
-<p class="p1"><span class="s1"><span class="Apple-converted-space">                    </span>["Wrap au Poulet / Chicken Wrap", "Wrap au poulet / Chicken wrap.", "5.99"],</span></p>
-<p class="p1"><span class="s1"><span class="Apple-converted-space">                    </span>["Wrap au Fromage / Paneer Wrap", "Wrap au fromage / Cheese wrap.", "5.99"],</span></p>
-<p class="p1"><span class="s1"><span class="Apple-converted-space">                    </span>["Wrap Végétal / Veggie Wrap", "Wrap végétarien / Veggie wrap.", "4.99"],</span></p>
-<p class="p1"><span class="s1"><span class="Apple-converted-space">                    </span>["Wrap au Bœuf / Beef Wrap", "Wrap au bœuf / Beef wrap.", "4.99"],</span></p>
-<p class="p1"><span class="s1"><span class="Apple-converted-space">                    </span>["Poulet Tandoori Hall's / Half Tandoori Chicken", "Demi poulet tandoori / Half tandoori chicken.", "19.99"],</span></p>
-<p class="p1"><span class="s1"><span class="Apple-converted-space">                    </span>["Demi-Poulet Tandoori / Half Chicken Tandoori", "Demi poulet mariné grillé / Half marinated grilled chicken.", "10.99"],</span></p>
-<p class="p1"><span class="s1"><span class="Apple-converted-space">                    </span>["Poitrine de Poulet / Chicken Breast", "Poitrine de poulet grillée / Grilled chicken breast.", "5.99"],</span></p>
-<p class="p1"><span class="s1"><span class="Apple-converted-space">                    </span>["Cuisse de Poulet / Chicken Leg", "Cuisse de poulet grillée / Grilled chicken leg.", "4.99"],</span></p>
-<p class="p1"><span class="s1"><span class="Apple-converted-space">                </span>];</span></p>
-<p class="p1"><span class="s1"><span class="Apple-converted-space">                </span>const appetizerList = document.getElementById('appetizers-list');</span></p>
-<p class="p1"><span class="s1"><span class="Apple-converted-space">                </span>appetizersData.forEach(item =&gt; {</span></p>
-<p class="p1"><span class="s1"><span class="Apple-converted-space">                    </span>appetizerList.innerHTML += createMenuItem(item[0], item[1], `$${item[2]}`);</span></p>
-<p class="p1"><span class="s1"><span class="Apple-converted-space">                </span>});</span></p>
-<p class="p1"><span class="s1"><span class="Apple-converted-space">            </span>&lt;/script&gt;</span></p>
-<p class="p1"><span class="s1"><span class="Apple-converted-space">        </span>&lt;/section&gt;</span></p>
-<p class="p2"><span class="s1"></span><br></p>
-<p class="p2"><span class="s1"></span><br></p>
-<p class="p1"><span class="s1"><span class="Apple-converted-space">        </span>&lt;!-- VEGETARIAN DISHES --&gt;&lt;section class="mb-10"&gt;</span></p>
-<p class="p1"><span class="s1"><span class="Apple-converted-space">            </span>&lt;h2 class="section-title text-3xl font-bold mb-6 pt-4 text-orange-500"&gt;</span></p>
-<p class="p1"><span class="s1"><span class="Apple-converted-space">                </span>PLATS VÉGÉTARIENS / VEGETARIAN DISHES</span></p>
-<p class="p1"><span class="s1"><span class="Apple-converted-space">            </span>&lt;/h2&gt;</span></p>
-<p class="p1"><span class="s1"><span class="Apple-converted-space">            </span>&lt;div id="vegetarian-dishes-list" class="grid md:grid-cols-2 gap-x-10 gap-y-4"&gt;</span></p>
-<p class="p1"><span class="s1"><span class="Apple-converted-space">                </span>&lt;!-- Data will be populated here --&gt;&lt;/div&gt;</span></p>
-<p class="p1"><span class="s1"><span class="Apple-converted-space">            </span>&lt;script&gt;</span></p>
-<p class="p1"><span class="s1"><span class="Apple-converted-space">                </span>const vegetarianDishesData = [</span></p>
-<p class="p1"><span class="s1"><span class="Apple-converted-space">                    </span>["Aloo Gobi / Aloo Gobi", "Choux-fleur, pommes de terre, tomates, gingembre, ail &amp; épices indiennes.", "9.99"],</span></p>
-<p class="p1"><span class="s1"><span class="Apple-converted-space">                    </span>["Aubergine Bharta / Eggplant Bharta", "Aubergine avec tomates, gingembre, ail &amp; épices indiennes.", "9.99"],</span></p>
-<p class="p1"><span class="s1"><span class="Apple-converted-space">                    </span>["Bhindi Bhaji / Bhindi Bhaji", "Okra frais cuit à l'indienne.", "11.99"],</span></p>
-<p class="p1"><span class="s1"><span class="Apple-converted-space">                    </span>["Daal Makhni / Daal Makhni", "Mélange de lentilles, ail, gingembre, beurre, crème &amp; épices indiennes.", "10.99"],</span></p>
-<p class="p1"><span class="s1"><span class="Apple-converted-space">                    </span>["Daal Tarka / Daal Tarka", "Mélange de lentilles avec gingembre.", "9.99"],</span></p>
-<p class="p1"><span class="s1"><span class="Apple-converted-space">                    </span>["Shahi Paneer / Shahi Paneer", "Sauce tomates, crème, fromage, gingembre, ail.", "12.99"],</span></p>
-<p class="p1"><span class="s1"><span class="Apple-converted-space">                    </span>["Chana Masala / Chana Masala", "Pois chiches, tomates, gingembre, ail &amp; épices indiennes.", "9.99"],</span></p>
-<p class="p1"><span class="s1"><span class="Apple-converted-space">                    </span>["Mix Végétarienne / Mixed Vegetable", "Légumes frais, tomates, gingembre, ail &amp; épices indiennes.", "9.99"],</span></p>
-<p class="p1"><span class="s1"><span class="Apple-converted-space">                    </span>["Korma aux Légumes / Veg Korma", "Légumes, crème, épices.", "11.99"],</span></p>
-<p class="p1"><span class="s1"><span class="Apple-converted-space">                    </span>["Malai Kofta / Malai Kofta", "Morceaux de fromage avec tomates, crème, ail, gingembre et épices.", "12.99"],</span></p>
-<p class="p1"><span class="s1"><span class="Apple-converted-space">                    </span>["Palak Paneer / Palak Paneer", "Épinards frais, oignons, fromage, gingembre, ail et épices.", "11.99"],</span></p>
-<p class="p1"><span class="s1"><span class="Apple-converted-space">                    </span>["Sarson Ka Saag / Sarson Ka Saag", "Épinards frais, moutarde, gingembre, ail et épices.", "11.99"],</span></p>
-<p class="p1"><span class="s1"><span class="Apple-converted-space">                    </span>["Aloo Mattar / Aloo Mattar", "Pois verts, pomme de terre, tomates, gingembre, ail et épices.", "11.99"],</span></p>
-<p class="p1"><span class="s1"><span class="Apple-converted-space">                    </span>["Aloo Palak / Aloo Palak", "Épinards cuits avec pommes de terre, tomates et épices.", "11.99"],</span></p>
-<p class="p1"><span class="s1"><span class="Apple-converted-space">                    </span>["Mattar Paneer / Mattar Paneer", "Pois verts, fromages, tomates, gingembre, ail, épices.", "11.99"],</span></p>
-<p class="p1"><span class="s1"><span class="Apple-converted-space">                    </span>["Piment Fromage - Chilli Cheese / Chilli Cheese", "Fromage avec piments verts, oignons, piments forts.", "11.99"],</span></p>
-<p class="p1"><span class="s1"><span class="Apple-converted-space">                    </span>["Champignons Fromage / Mushroom Cheese", "Fromage cuit avec oignons, piments verts, épices.", "11.99"],</span></p>
-<p class="p1"><span class="s1"><span class="Apple-converted-space">                    </span>["Tomate et Fromage / Tomato and Paneer", "Fromage, tomates, oignons, ail, gingembre, épices.", "11.99"],</span></p>
-<p class="p1"><span class="s1"><span class="Apple-converted-space">                    </span>["Paneer Jalfrazie / Paneer Jalfrezi", "Fromage cuit avec oignons, piments verts, épices.", "11.99"],</span></p>
-<p class="p1"><span class="s1"><span class="Apple-converted-space">                    </span>["Champignons Balti / Mushroom Balti", "Champignons frais, ail, gingembre, oignons cuits avec sauce tomates.", "11.99"],</span></p>
-<p class="p1"><span class="s1"><span class="Apple-converted-space">                    </span>["Paneer Tikka Masala / Paneer Tikka Masala", "Fromage, piments verts, oignons cuits dans une sauce crème.", "11.99"],</span></p>
-<p class="p1"><span class="s1"><span class="Apple-converted-space">                    </span>["Paneer Manchurian / Paneer Manchurian", "Fromage frais avec piments verts, oignons et épices.", "11.99"],</span></p>
-<p class="p1"><span class="s1"><span class="Apple-converted-space">                    </span>["Paneer Korma / Paneer Korma", "Fromage frais avec une sauce crémeuse.", "11.99"],</span></p>
-<p class="p1"><span class="s1"><span class="Apple-converted-space">                    </span>["Paneer Purji / Paneer Bhurji", "Fromage, oignons, tomates.", "11.99"],</span></p>
-<p class="p1"><span class="s1"><span class="Apple-converted-space">                    </span>["Paneer Butter Masala / Paneer Butter Masala", "Fromage, oignons, sauce crémeuse, épices.", "11.99"],</span></p>
-<p class="p1"><span class="s1"><span class="Apple-converted-space">                    </span>["Paneer Tikka / Paneer Tikka", "Fromage, piments verts, oignons.", "11.99"],</span></p>
-<p class="p1"><span class="s1"><span class="Apple-converted-space">                    </span>["Sarson da Saag with Paneer / Sarson da Saag with Paneer", "Sarson da Saag avec fromage Paneer.", "11.99"],</span></p>
-<p class="p1"><span class="s1"><span class="Apple-converted-space">                </span>];</span></p>
-<p class="p1"><span class="s1"><span class="Apple-converted-space">                </span>const vegetarianDishesList = document.getElementById('vegetarian-dishes-list');</span></p>
-<p class="p1"><span class="s1"><span class="Apple-converted-space">                </span>vegetarianDishesData.forEach(item =&gt; {</span></p>
-<p class="p1"><span class="s1"><span class="Apple-converted-space">                    </span>vegetarianDishesList.innerHTML += createMenuItem(item[0], item[1], `$${item[2]}`);</span></p>
-<p class="p1"><span class="s1"><span class="Apple-converted-space">                </span>});</span></p>
-<p class="p1"><span class="s1"><span class="Apple-converted-space">            </span>&lt;/script&gt;</span></p>
-<p class="p1"><span class="s1"><span class="Apple-converted-space">        </span>&lt;/section&gt;</span></p>
-<p class="p2"><span class="s1"></span><br></p>
-<p class="p1"><span class="s1"><span class="Apple-converted-space">        </span>&lt;!-- MEAT DISHES --&gt;&lt;section class="mb-10"&gt;</span></p>
-<p class="p1"><span class="s1"><span class="Apple-converted-space">            </span>&lt;h2 class="section-title text-3xl font-bold mb-6 pt-4 text-orange-500"&gt;</span></p>
-<p class="p1"><span class="s1"><span class="Apple-converted-space">                </span>PLATS DE VIANDES / MEAT DISHES</span></p>
-<p class="p1"><span class="s1"><span class="Apple-converted-space">            </span>&lt;/h2&gt;</span></p>
-<p class="p2"><span class="s1"></span><br></p>
-<p class="p1"><span class="s1"><span class="Apple-converted-space">            </span>&lt;!-- Curries &amp; Masalas --&gt;&lt;h3 class="text-2xl font-semibold mb-4 text-gray-200"&gt;Curries &amp; Masalas&lt;/h3&gt;</span></p>
-<p class="p1"><span class="s1"><span class="Apple-converted-space">            </span>&lt;div id="curries-masalas-list" class="grid md:grid-cols-2 gap-x-10 gap-y-4"&gt;</span></p>
-<p class="p1"><span class="s1"><span class="Apple-converted-space">                </span>&lt;!-- Data will be populated here --&gt;&lt;/div&gt;</span></p>
-<p class="p1"><span class="s1"><span class="Apple-converted-space">            </span>&lt;script&gt;</span></p>
-<p class="p1"><span class="s1"><span class="Apple-converted-space">                </span>const curriesMasalasData = [</span></p>
-<p class="p1"><span class="s1"><span class="Apple-converted-space">                    </span>["1. Poulet Curry Désossé / Boneless Chicken Curry", "Poulet désossé avec oignons, tomates, gingembre, ail et épices.", "14.99"],</span></p>
-<p class="p1"><span class="s1"><span class="Apple-converted-space">                    </span>["2. Korma au Poulet / Chicken Korma", "Poulet cuit avec tomates, crème, gingembre, ail et épices.", "14.99"],</span></p>
-<p class="p1"><span class="s1"><span class="Apple-converted-space">                    </span>["3. Bhuna au Poulet / Chicken Bhuna", "Poulet désossé cuit avec piments verts, oignons, tomates et épices.", "14.99"],</span></p>
-<p class="p1"><span class="s1"><span class="Apple-converted-space">                    </span>["4. Balti au Poulet / Chicken Balti", "Poulet désossé cuit avec tomates, gingembre, coriandre, ail, épices.", "14.99"],</span></p>
-<p class="p1"><span class="s1"><span class="Apple-converted-space">                    </span>["5. Manchurian au Poulet / Chicken Manchurian", "Poulet avec oignons, tomates, sauce aigre-douce et épices.", "14.99"],</span></p>
-<p class="p1"><span class="s1"><span class="Apple-converted-space">                    </span>["6. Jalfrazie au Poulet / Chicken Jalfrezi", "Poulet avec oignons, piments verts, tomates, gingembre, ail et épices.", "14.99"],</span></p>
-<p class="p1"><span class="s1"><span class="Apple-converted-space">                    </span>["7. Poulet Vindaloo / Chicken Vindaloo", "Poulet avec pomme de terre, gingembre, ail, épices.", "14.99"],</span></p>
-<p class="p1"><span class="s1"><span class="Apple-converted-space">                    </span>["8. Poulet Tikka Masala / Chicken Tikka Masala", "Poulet désossé dans un curry avec oignons, piments verts, gingembre, crème, ail, épices.", "14.99"],</span></p>
-<p class="p1"><span class="s1"><span class="Apple-converted-space">                    </span>["9. Poulet au Beurre - Butter Chicken / Butter Chicken", "Poulet cuit dans un four d'argile avec sauce aux tomates et crème.", "14.99"],</span></p>
-<p class="p1"><span class="s1"><span class="Apple-converted-space">                    </span>["10. Poulet Chilli / Chicken Chilli", "Poulet frit avec oignons, gingembre, ail, piment et sauce.", "14.99"],</span></p>
-<p class="p1"><span class="s1"><span class="Apple-converted-space">                </span>];</span></p>
-<p class="p1"><span class="s1"><span class="Apple-converted-space">                </span>const curriesMasalasList = document.getElementById('curries-masalas-list');</span></p>
-<p class="p1"><span class="s1"><span class="Apple-converted-space">                </span>curriesMasalasData.forEach(item =&gt; {</span></p>
-<p class="p1"><span class="s1"><span class="Apple-converted-space">                    </span>curriesMasalasList.innerHTML += createMenuItem(item[0], item[1], `$${item[2]}`);</span></p>
-<p class="p1"><span class="s1"><span class="Apple-converted-space">                </span>});</span></p>
-<p class="p1"><span class="s1"><span class="Apple-converted-space">            </span>&lt;/script&gt;</span></p>
-<p class="p2"><span class="s1"></span><br></p>
-<p class="p1"><span class="s1"><span class="Apple-converted-space">            </span>&lt;!-- Lamb &amp; Other Specialties --&gt;&lt;h3 class="text-2xl font-semibold mb-4 mt-8 text-gray-200"&gt;Agneau &amp; Autres Spécialités / Lamb &amp; Other Specialties&lt;/h3&gt;</span></p>
-<p class="p1"><span class="s1"><span class="Apple-converted-space">            </span>&lt;div id="lamb-specialties-list" class="grid md:grid-cols-2 gap-x-10 gap-y-4"&gt;</span></p>
-<p class="p1"><span class="s1"><span class="Apple-converted-space">                </span>&lt;!-- Data will be populated here --&gt;&lt;/div&gt;</span></p>
-<p class="p1"><span class="s1"><span class="Apple-converted-space">            </span>&lt;script&gt;</span></p>
-<p class="p1"><span class="s1"><span class="Apple-converted-space">                </span>const lambSpecialtiesData = [</span></p>
-<p class="p1"><span class="s1"><span class="Apple-converted-space">                    </span>["11. Poulet Saag / Chicken Saag", "Épinards et poulet.", "15.99"],</span></p>
-<p class="p1"><span class="s1"><span class="Apple-converted-space">                    </span>["12. Curry de Mouton ou d'Agneau / Mutton or Lamb Curry", "Agneau, oignons, tomates, gingembre, ail et épices.", "15.99"],</span></p>
-<p class="p1"><span class="s1"><span class="Apple-converted-space">                    </span>["13. Bhuna Ghosht / Bhuna Gosht", "Chèvre cuit avec tomates, oignons, piments et épices.", "15.99"],</span></p>
-<p class="p1"><span class="s1"><span class="Apple-converted-space">                    </span>["14. Mutton Balti / Mutton Balti", "Mouton Balti.", "15.99"],</span></p>
-<p class="p1"><span class="s1"><span class="Apple-converted-space">                    </span>["15. Mutton Palak / Mutton Palak", "Mouton avec épinards.", "15.99"],</span></p>
-<p class="p1"><span class="s1"><span class="Apple-converted-space">                    </span>["16. Malai Kabab / Malai Kebab", "Poulet cuit avec tomates, crème, gingembre, ail.", "15.99"],</span></p>
-<p class="p1"><span class="s1"><span class="Apple-converted-space">                    </span>["17. Kabab Balti / Kebab Balti", "Kabab Balti.", "15.99"],</span></p>
-<p class="p1"><span class="s1"><span class="Apple-converted-space">                    </span>["18. Poulet Achar / Chicken Achar", "Poulet mariné.", "15.99"],</span></p>
-<p class="p1"><span class="s1"><span class="Apple-converted-space">                    </span>["19. Goat Achar / Goat Achar", "Chèvre mariné.", "15.99"],</span></p>
-<p class="p1"><span class="s1"><span class="Apple-converted-space">                    </span>["20. Poulet aux Poivre Noir / Black Pepper Chicken", "Poulet au poivre noir.", "15.99"],</span></p>
-<p class="p1"><span class="s1"><span class="Apple-converted-space">                    </span>["21. Poulet à la Mangue / Mango Chicken", "Poulet à la mangue.", "15.99"],</span></p>
-<p class="p1"><span class="s1"><span class="Apple-converted-space">                    </span>["22. Poulet Dhansak / Chicken Dhansak", "Poulet Dhansak.", "15.99"],</span></p>
-<p class="p1"><span class="s1"><span class="Apple-converted-space">                    </span>["23. Keema Curry / Keema Curry", "Keema Curry.", "15.99"],</span></p>
-<p class="p1"><span class="s1"><span class="Apple-converted-space">                    </span>["24. Agneau Tikka Masala / Lamb Tikka Masala", "Agneau Tikka Masala.", "15.99"],</span></p>
-<p class="p1"><span class="s1"><span class="Apple-converted-space">                    </span>["25. Roganjosh / Rogan Josh", "Roganjosh.", "15.99"],</span></p>
-<p class="p1"><span class="s1"><span class="Apple-converted-space">                    </span>["26. Lamb Korma d'Agneau / Lamb Korma", "Korma d'Agneau.", "15.99"],</span></p>
-<p class="p1"><span class="s1"><span class="Apple-converted-space">                </span>];</span></p>
-<p class="p1"><span class="s1"><span class="Apple-converted-space">                </span>const lambSpecialtiesList = document.getElementById('lamb-specialties-list');</span></p>
-<p class="p1"><span class="s1"><span class="Apple-converted-space">                </span>lambSpecialtiesData.forEach(item =&gt; {</span></p>
-<p class="p1"><span class="s1"><span class="Apple-converted-space">                    </span>lambSpecialtiesList.innerHTML += createMenuItem(item[0], item[1], `$${item[2]}`);</span></p>
-<p class="p1"><span class="s1"><span class="Apple-converted-space">                </span>});</span></p>
-<p class="p1"><span class="s1"><span class="Apple-converted-space">            </span>&lt;/script&gt;</span></p>
-<p class="p1"><span class="s1"><span class="Apple-converted-space">        </span>&lt;/section&gt;</span></p>
-<p class="p2"><span class="s1"></span><br></p>
-<p class="p1"><span class="s1"><span class="Apple-converted-space">        </span>&lt;!-- SEAFOOD --&gt;&lt;section class="mb-10"&gt;</span></p>
-<p class="p1"><span class="s1"><span class="Apple-converted-space">            </span>&lt;h2 class="section-title text-3xl font-bold mb-6 pt-4 text-orange-500"&gt;</span></p>
-<p class="p1"><span class="s1"><span class="Apple-converted-space">                </span>FRUITS DE MER / SEAFOOD</span></p>
-<p class="p1"><span class="s1"><span class="Apple-converted-space">            </span>&lt;/h2&gt;</span></p>
-<p class="p1"><span class="s1"><span class="Apple-converted-space">            </span>&lt;div id="seafood-list" class="grid md:grid-cols-2 gap-x-10 gap-y-4"&gt;</span></p>
-<p class="p1"><span class="s1"><span class="Apple-converted-space">                </span>&lt;!-- Data will be populated here --&gt;&lt;/div&gt;</span></p>
-<p class="p1"><span class="s1"><span class="Apple-converted-space">            </span>&lt;script&gt;</span></p>
-<p class="p1"><span class="s1"><span class="Apple-converted-space">                </span>const seafoodData = [</span></p>
-<p class="p1"><span class="s1"><span class="Apple-converted-space">                    </span>["1. Curry au Poisson / Fish Curry", "Poisson cuit dans sauce curry / Fish in curry sauce.", "17.99"],</span></p>
-<p class="p1"><span class="s1"><span class="Apple-converted-space">                    </span>["2. Balti au Poisson / Fish Balti", "Poisson en sauce balti épicée / Fish in spicy balti sauce.", "17.99"],</span></p>
-<p class="p1"><span class="s1"><span class="Apple-converted-space">                    </span>["3. Tikka Masala au Poisson / Fish Tikka Masala", "Poisson mariné dans sauce tikka / Marinated fish in tikka sauce.", "17.99"],</span></p>
-<p class="p1"><span class="s1"><span class="Apple-converted-space">                    </span>["4. Balti aux Crevettes / Shrimp Balti", "Crevettes en sauce balti / Shrimp in balti sauce.", "17.99"],</span></p>
-<p class="p1"><span class="s1"><span class="Apple-converted-space">                    </span>["5. Masala aux Crevettes / Shrimp Masala", "Crevettes dans sauce masala / Shrimp in masala sauce.", "17.99"],</span></p>
-<p class="p1"><span class="s1"><span class="Apple-converted-space">                    </span>["6. Curry aux Crevettes / Shrimp Curry", "Crevettes cuites dans curry / Shrimp in curry.", "17.99"],</span></p>
-<p class="p1"><span class="s1"><span class="Apple-converted-space">                    </span>["7. Chilli Poisson / Chilli Fish", "Poisson aux piments / Spicy chili fish.", "17.99"],</span></p>
-<p class="p1"><span class="s1"><span class="Apple-converted-space">                </span>];</span></p>
-<p class="p1"><span class="s1"><span class="Apple-converted-space">                </span>const seafoodList = document.getElementById('seafood-list');</span></p>
-<p class="p1"><span class="s1"><span class="Apple-converted-space">                </span>seafoodData.forEach(item =&gt; {</span></p>
-<p class="p1"><span class="s1"><span class="Apple-converted-space">                    </span>seafoodList.innerHTML += createMenuItem(item[0], item[1], `$${item[2]}`);</span></p>
-<p class="p1"><span class="s1"><span class="Apple-converted-space">                </span>});</span></p>
-<p class="p1"><span class="s1"><span class="Apple-converted-space">            </span>&lt;/script&gt;</span></p>
-<p class="p1"><span class="s1"><span class="Apple-converted-space">        </span>&lt;/section&gt;</span></p>
-<p class="p2"><span class="s1"></span><br></p>
-<p class="p1"><span class="s1"><span class="Apple-converted-space">        </span>&lt;!-- TANDOORI &amp; SOYA CHAAP --&gt;&lt;section class="mb-10"&gt;</span></p>
-<p class="p1"><span class="s1"><span class="Apple-converted-space">            </span>&lt;h2 class="section-title text-3xl font-bold mb-6 pt-4 text-orange-500"&gt;</span></p>
-<p class="p1"><span class="s1"><span class="Apple-converted-space">                </span>TANDOORI &amp; SOYA CHAAP SPECIALTIES</span></p>
-<p class="p1"><span class="s1"><span class="Apple-converted-space">            </span>&lt;/h2&gt;</span></p>
-<p class="p2"><span class="s1"></span><br></p>
-<p class="p1"><span class="s1"><span class="Apple-converted-space">            </span>&lt;!-- Tandoori --&gt;&lt;h3 class="text-2xl font-semibold mb-4 text-gray-200"&gt;Tandoori&lt;/h3&gt;</span></p>
-<p class="p1"><span class="s1"><span class="Apple-converted-space">            </span>&lt;div id="tandoori-list" class="grid md:grid-cols-2 gap-x-10 gap-y-4"&gt;</span></p>
-<p class="p1"><span class="s1"><span class="Apple-converted-space">                </span>&lt;!-- Data will be populated here --&gt;&lt;/div&gt;</span></p>
-<p class="p1"><span class="s1"><span class="Apple-converted-space">            </span>&lt;script&gt;</span></p>
-<p class="p1"><span class="s1"><span class="Apple-converted-space">                </span>const tandooriData = [</span></p>
-<p class="p1"><span class="s1"><span class="Apple-converted-space">                    </span>["1. Poulet Complet / Full Chicken", "Poulet complet cuit au Tandoor.", "24.99"],</span></p>
-<p class="p1"><span class="s1"><span class="Apple-converted-space">                    </span>["3. Demi Poulet / Half Chicken", "Demi-poulet cuit au Tandoor.", "12.99"],</span></p>
-<p class="p1"><span class="s1"><span class="Apple-converted-space">                    </span>["5. Tikka Poulet / Chicken Tikka", "Morceaux de poulet marinés et grillés.", "15.99"],</span></p>
-<p class="p1"><span class="s1"><span class="Apple-converted-space">                    </span>["8. Tikka au Poisson / Fish Tikka", "Morceaux de poisson marinés et grillés.", "15.99"],</span></p>
-<p class="p1"><span class="s1"><span class="Apple-converted-space">                    </span>["9. Kebab Poulet / Chicken Kebab", "Kebab de poulet.", "15.99"],</span></p>
-<p class="p1"><span class="s1"><span class="Apple-converted-space">                </span>];</span></p>
-<p class="p1"><span class="s1"><span class="Apple-converted-space">                </span>const tandooriList = document.getElementById('tandoori-list');</span></p>
-<p class="p1"><span class="s1"><span class="Apple-converted-space">                </span>tandooriData.forEach(item =&gt; {</span></p>
-<p class="p1"><span class="s1"><span class="Apple-converted-space">                    </span>tandooriList.innerHTML += createMenuItem(item[0], item[1], `$${item[2]}`);</span></p>
-<p class="p1"><span class="s1"><span class="Apple-converted-space">                </span>});</span></p>
-<p class="p1"><span class="s1"><span class="Apple-converted-space">            </span>&lt;/script&gt;</span></p>
-<p class="p2"><span class="s1"></span><br></p>
-<p class="p1"><span class="s1"><span class="Apple-converted-space">            </span>&lt;!-- Soya Chaap --&gt;&lt;h3 class="text-2xl font-semibold mb-4 mt-8 text-gray-200"&gt;Soya Chaap&lt;/h3&gt;</span></p>
-<p class="p1"><span class="s1"><span class="Apple-converted-space">            </span>&lt;div id="soya-chaap-list" class="grid md:grid-cols-2 gap-x-10 gap-y-4"&gt;</span></p>
-<p class="p1"><span class="s1"><span class="Apple-converted-space">                </span>&lt;!-- Data will be populated here --&gt;&lt;/div&gt;</span></p>
-<p class="p1"><span class="s1"><span class="Apple-converted-space">            </span>&lt;script&gt;</span></p>
-<p class="p1"><span class="s1"><span class="Apple-converted-space">                </span>const soyaChaapData = [</span></p>
-<p class="p1"><span class="s1"><span class="Apple-converted-space">                    </span>["1. Soya Chaap Malai Tikka / Malai Soya Chaap Tikka", "Soya Chaap Malai Tikka.", "13.99"],</span></p>
-<p class="p1"><span class="s1"><span class="Apple-converted-space">                    </span>["2. Soya Chaap Tikka / Soya Chaap Tikka", "Soya Chaap Tikka.", "12.99"],</span></p>
-<p class="p1"><span class="s1"><span class="Apple-converted-space">                    </span>["3. Soya Chaap Tikka Masala / Soya Chaap Tikka Masala", "Soya Chaap Tikka Masala.", "14.99"],</span></p>
-<p class="p1"><span class="s1"><span class="Apple-converted-space">                    </span>["4. Shahi Soya Chaap Masala / Shahi Soya Chaap Masala", "Shahi Soya Chaap Masala.", "14.99"],</span></p>
-<p class="p1"><span class="s1"><span class="Apple-converted-space">                    </span>["5. Chilli Soya Chaap / Chilli Soya Chaap", "Chilli Soya Chaap.", "14.99"],</span></p>
-<p class="p1"><span class="s1"><span class="Apple-converted-space">                </span>];</span></p>
-<p class="p1"><span class="s1"><span class="Apple-converted-space">                </span>const soyaChaapList = document.getElementById('soya-chaap-list');</span></p>
-<p class="p1"><span class="s1"><span class="Apple-converted-space">                </span>soyaChaapData.forEach(item =&gt; {</span></p>
-<p class="p1"><span class="s1"><span class="Apple-converted-space">                    </span>soyaChaapList.innerHTML += createMenuItem(item[0], item[1], `$${item[2]}`);</span></p>
-<p class="p1"><span class="s1"><span class="Apple-converted-space">                </span>});</span></p>
-<p class="p1"><span class="s1"><span class="Apple-converted-space">            </span>&lt;/script&gt;</span></p>
-<p class="p1"><span class="s1"><span class="Apple-converted-space">        </span>&lt;/section&gt;</span></p>
-<p class="p2"><span class="s1"></span><br></p>
-<p class="p1"><span class="s1"><span class="Apple-converted-space">        </span>&lt;!-- RIZ, PAINS &amp; EXTRAS --&gt;&lt;section class="mb-10"&gt;</span></p>
-<p class="p1"><span class="s1"><span class="Apple-converted-space">            </span>&lt;h2 class="section-title text-3xl font-bold mb-6 pt-4 text-orange-500"&gt;</span></p>
-<p class="p1"><span class="s1"><span class="Apple-converted-space">                </span>RIZ, PAINS &amp; EXTRAS / RICE, BREADS &amp; SIDES</span></p>
-<p class="p1"><span class="s1"><span class="Apple-converted-space">            </span>&lt;/h2&gt;</span></p>
-<p class="p2"><span class="s1"></span><br></p>
-<p class="p1"><span class="s1"><span class="Apple-converted-space">            </span>&lt;!-- Les Riz - Rice --&gt;&lt;h3 class="text-2xl font-semibold mb-4 text-gray-200"&gt;Les Riz / Rice&lt;/h3&gt;</span></p>
-<p class="p1"><span class="s1"><span class="Apple-converted-space">            </span>&lt;div id="rice-list" class="grid md:grid-cols-2 gap-x-10 gap-y-4"&gt;</span></p>
-<p class="p1"><span class="s1"><span class="Apple-converted-space">                </span>&lt;!-- Data will be populated here --&gt;&lt;/div&gt;</span></p>
-<p class="p1"><span class="s1"><span class="Apple-converted-space">            </span>&lt;script&gt;</span></p>
-<p class="p1"><span class="s1"><span class="Apple-converted-space">                </span>const riceData = [</span></p>
-<p class="p1"><span class="s1"><span class="Apple-converted-space">                    </span>["1. Riz / Rice", "Riz simple.", "4.99"],</span></p>
-<p class="p1"><span class="s1"><span class="Apple-converted-space">                    </span>["2. Pilow Végétarien / Vegetable Pilaf", "Riz aux légumes épicés / Spiced vegetable rice.", "7.99"],</span></p>
-<p class="p1"><span class="s1"><span class="Apple-converted-space">                    </span>["3. Matter Pilow / Mattar Pilaf", "Riz aux pois verts / Green pea rice.", "7.99"],</span></p>
-<p class="p1"><span class="s1"><span class="Apple-converted-space">                    </span>["4. Biryani Végétarien / Vegetable Biryani", "Biryani aux légumes / Vegetable biryani.", "9.99"],</span></p>
-<p class="p1"><span class="s1"><span class="Apple-converted-space">                    </span>["5. Biryani au Poulet / Chicken Biryani", "Biryani au poulet / Chicken biryani.", "12.99"],</span></p>
-<p class="p1"><span class="s1"><span class="Apple-converted-space">                    </span>["6. Biryani à l'Agneau / Lamb Biryani", "Biryani à l'agneau / Lamb biryani.", "15.99"],</span></p>
-<p class="p1"><span class="s1"><span class="Apple-converted-space">                    </span>["7. Biryiani au Mouton / Mutton Biryani", "Biryani au mouton / Mutton biryani.", "15.99"],</span></p>
-<p class="p1"><span class="s1"><span class="Apple-converted-space">                    </span>["8. Biryani aux Crevettes / Shrimp Biryani", "Biryani aux crevettes / Shrimp biryani.", "15.99"],</span></p>
-<p class="p1"><span class="s1"><span class="Apple-converted-space">                    </span>["9. Biryani au Poisson / Fish Biryani", "Biryani au poisson / Fish biryani.", "15.99"],</span></p>
-<p class="p1"><span class="s1"><span class="Apple-converted-space">                    </span>["10. Super Special Byriani (avec os) / Super Special Biryani (with bone)", "Super spécial avec os (with bone).", "8.99"],</span></p>
-<p class="p1"><span class="s1"><span class="Apple-converted-space">                </span>];</span></p>
-<p class="p1"><span class="s1"><span class="Apple-converted-space">                </span>const riceList = document.getElementById('rice-list');</span></p>
-<p class="p1"><span class="s1"><span class="Apple-converted-space">                </span>riceData.forEach(item =&gt; {</span></p>
-<p class="p1"><span class="s1"><span class="Apple-converted-space">                    </span>riceList.innerHTML += createMenuItem(item[0], item[1], `$${item[2]}`);</span></p>
-<p class="p1"><span class="s1"><span class="Apple-converted-space">                </span>});</span></p>
-<p class="p1"><span class="s1"><span class="Apple-converted-space">            </span>&lt;/script&gt;</span></p>
-<p class="p2"><span class="s1"></span><br></p>
-<p class="p1"><span class="s1"><span class="Apple-converted-space">            </span>&lt;!-- Les Pains - Breads --&gt;&lt;h3 class="text-2xl font-semibold mb-4 mt-8 text-gray-200"&gt;Les Pains / Breads&lt;/h3&gt;</span></p>
-<p class="p1"><span class="s1"><span class="Apple-converted-space">            </span>&lt;div id="breads-list" class="grid md:grid-cols-2 gap-x-10 gap-y-4"&gt;</span></p>
-<p class="p1"><span class="s1"><span class="Apple-converted-space">                </span>&lt;!-- Data will be populated here --&gt;&lt;/div&gt;</span></p>
-<p class="p1"><span class="s1"><span class="Apple-converted-space">            </span>&lt;script&gt;</span></p>
-<p class="p1"><span class="s1"><span class="Apple-converted-space">                </span>const breadsData = [</span></p>
-<p class="p1"><span class="s1"><span class="Apple-converted-space">                    </span>["13. Naan / Naan", "Naan classique.", "2.99"],</span></p>
-<p class="p1"><span class="s1"><span class="Apple-converted-space">                    </span>["16. Butter Naan / Butter Naan", "Naan au beurre.", "2.99"],</span></p>
-<p class="p1"><span class="s1"><span class="Apple-converted-space">                    </span>["14. Naan au Fromage / Cheese Naan", "Naan fourré au fromage / Cheese stuffed naan.", "4.99"],</span></p>
-<p class="p1"><span class="s1"><span class="Apple-converted-space">                    </span>["15. Naan à l'Ail / Garlic Naan", "Naan à l'ail frais / Fresh garlic naan.", "4.99"],</span></p>
-<p class="p1"><span class="s1"><span class="Apple-converted-space">                    </span>["19. Naan Piment &amp; Coriandre / Chili Coriander Naan", "Naan au piment et coriandre / Chili coriander naan.", "4.99"],</span></p>
-<p class="p1"><span class="s1"><span class="Apple-converted-space">                    </span>["20. Naan à la Coriandre / Coriander Naan", "Naan à la coriandre fraîche / Fresh coriander naan.", "4.99"],</span></p>
-<p class="p1"><span class="s1"><span class="Apple-converted-space">                    </span>["1. Naan Pomme de Terre / Potato Naan", "Naan fourré aux pommes de terre / Potato stuffed naan.", "4.99"],</span></p>
-<p class="p1"><span class="s1"><span class="Apple-converted-space">                    </span>["2. Oignon Kulcha / Onion Kulcha", "Kulcha aux oignons / Onion kulcha.", "4.99"],</span></p>
-<p class="p1"><span class="s1"><span class="Apple-converted-space">                    </span>["3. Plain Parantha / Plain Paratha", "Parantha nature / Plain paratha.", "4.99"],</span></p>
-<p class="p1"><span class="s1"><span class="Apple-converted-space">                    </span>["4. Naan au Poulet / Chicken Naan", "Naan fourré au poulet / Chicken stuffed naan.", "4.99"],</span></p>
-<p class="p1"><span class="s1"><span class="Apple-converted-space">                    </span>["5. Aloo Parantha / Aloo Paratha", "Parantha aux pommes de terre / Potato paratha.", "4.99"],</span></p>
-<p class="p1"><span class="s1"><span class="Apple-converted-space">                    </span>["6. Gobie Parantha / Gobi Paratha", "Parantha au chou-fleur / Cauliflower paratha.", "4.99"],</span></p>
-<p class="p1"><span class="s1"><span class="Apple-converted-space">                    </span>["7. Lacha Parantha / Lacha Paratha", "Parantha en couches / Layered paratha.", "4.99"],</span></p>
-<p class="p1"><span class="s1"><span class="Apple-converted-space">                    </span>["8. Lacha Pudina Parantha / Lacha Pudina Paratha", "Parantha en couches à la menthe / Mint layered paratha.", "4.99"],</span></p>
-<p class="p1"><span class="s1"><span class="Apple-converted-space">                    </span>["9. Bhatura / Bhatura", "Pain frit moelleux / Fluffy fried bread.", "4.99"],</span></p>
-<p class="p1"><span class="s1"><span class="Apple-converted-space">                    </span>["10. Puri / Puri", "Pain frit croustillant / Crispy fried bread.", "4.99"],</span></p>
-<p class="p1"><span class="s1"><span class="Apple-converted-space">                    </span>["11. Maki Di Roti / Makki Di Roti", "Pain de maïs / Corn flatbread.", "4.99"],</span></p>
-<p class="p1"><span class="s1"><span class="Apple-converted-space">                    </span>["12. Chapati / Chapati", "Pain plat de blé / Wheat flatbread.", "4.99"],</span></p>
-<p class="p1"><span class="s1"><span class="Apple-converted-space">                    </span>["17. Naan Keema / Keema Naan", "Naan fourré à la viande hachée / Minced meat stuffed naan.", "4.99"],</span></p>
-<p class="p1"><span class="s1"><span class="Apple-converted-space">                    </span>["18. Roti Tandoori Blé Entier / Whole Wheat Tandoori Roti", "Roti de blé entier tandoori / Whole wheat tandoori roti.", "4.99"],</span></p>
-<p class="p1"><span class="s1"><span class="Apple-converted-space">                </span>];</span></p>
-<p class="p1"><span class="s1"><span class="Apple-converted-space">                </span>const breadsList = document.getElementById('breads-list');</span></p>
-<p class="p1"><span class="s1"><span class="Apple-converted-space">                </span>breadsData.forEach(item =&gt; {</span></p>
-<p class="p1"><span class="s1"><span class="Apple-converted-space">                    </span>breadsList.innerHTML += createMenuItem(item[0], item[1], `$${item[2]}`);</span></p>
-<p class="p1"><span class="s1"><span class="Apple-converted-space">                </span>});</span></p>
-<p class="p1"><span class="s1"><span class="Apple-converted-space">            </span>&lt;/script&gt;</span></p>
-<p class="p2"><span class="s1"></span><br></p>
-<p class="p1"><span class="s1"><span class="Apple-converted-space">            </span>&lt;!-- Side order - Extras --&gt;&lt;h3 class="text-2xl font-semibold mb-4 mt-8 text-gray-200"&gt;À-côtés / Side Order - Extras&lt;/h3&gt;</span></p>
-<p class="p1"><span class="s1"><span class="Apple-converted-space">            </span>&lt;div id="extras-list" class="grid md:grid-cols-2 gap-x-10 gap-y-4"&gt;</span></p>
-<p class="p1"><span class="s1"><span class="Apple-converted-space">                </span>&lt;!-- Data will be populated here --&gt;&lt;/div&gt;</span></p>
-<p class="p1"><span class="s1"><span class="Apple-converted-space">            </span>&lt;script&gt;</span></p>
-<p class="p1"><span class="s1"><span class="Apple-converted-space">                </span>const extrasData = [</span></p>
-<p class="p1"><span class="s1"><span class="Apple-converted-space">                    </span>["1. Raita / Raita", "Yaourt rafraîchissant aux concombres / Refreshing yogurt with cucumber.", "2.99"],</span></p>
-<p class="p1"><span class="s1"><span class="Apple-converted-space">                    </span>["2. Salade du Chef / Chef Salad", "Salade fraîche mixte / Fresh mixed salad.", "4.99"],</span></p>
-<p class="p1"><span class="s1"><span class="Apple-converted-space">                    </span>["3. Salade d'Oignons / Onion Salad", "Salade d'oignons épicés / Spiced onion salad.", "4.99"],</span></p>
-<p class="p1"><span class="s1"><span class="Apple-converted-space">                    </span>["4. Papadum / Papadum", "Croustilles indiennes / Indian crisps.", "2.99"],</span></p>
-<p class="p1"><span class="s1"><span class="Apple-converted-space">                    </span>["5. Chutney à la Mangue / Mango Chutney", "Chutney sucré à la mangue / Sweet mango chutney.", "2.99"],</span></p>
-<p class="p1"><span class="s1"><span class="Apple-converted-space">                    </span>["6. Cornichons Mélangés / Mixed Pickles Achar", "Assortiment de pickles / Mixed pickle assortment.", "2.99"],</span></p>
-<p class="p1"><span class="s1"><span class="Apple-converted-space">                    </span>["7. Katchumber Salade / Kachumber Salad", "Salade de concombres et tomates / Cucumber-tomato salad.", "4.99"],</span></p>
-<p class="p1"><span class="s1"><span class="Apple-converted-space">                    </span>["8. Sauce à l'Ail / Garlic Sauce", "Sauce crémeuse à l'ail / Creamy garlic sauce.", "2.99"],</span></p>
-<p class="p1"><span class="s1"><span class="Apple-converted-space">                    </span>["9. Sauce à la Menthe / Mint Sauce", "Sauce rafraîchissante à la menthe / Refreshing mint sauce.", "2.99"],</span></p>
-<p class="p1"><span class="s1"><span class="Apple-converted-space">                </span>];</span></p>
-<p class="p1"><span class="s1"><span class="Apple-converted-space">                </span>const extrasList = document.getElementById('extras-list');</span></p>
-<p class="p1"><span class="s1"><span class="Apple-converted-space">                </span>extrasData.forEach(item =&gt; {</span></p>
-<p class="p1"><span class="s1"><span class="Apple-converted-space">                    </span>extrasList.innerHTML += createMenuItem(item[0], item[1], `$${item[2]}`);</span></p>
-<p class="p1"><span class="s1"><span class="Apple-converted-space">                </span>});</span></p>
-<p class="p1"><span class="s1"><span class="Apple-converted-space">            </span>&lt;/script&gt;</span></p>
-<p class="p1"><span class="s1"><span class="Apple-converted-space">        </span>&lt;/section&gt;</span></p>
-<p class="p2"><span class="s1"></span><br></p>
-<p class="p1"><span class="s1"><span class="Apple-converted-space">        </span>&lt;!-- BBQ SIZZLERS &amp; SPECIALS --&gt;&lt;section class="mb-10"&gt;</span></p>
-<p class="p1"><span class="s1"><span class="Apple-converted-space">            </span>&lt;h2 class="section-title text-3xl font-bold mb-6 pt-4 text-orange-500"&gt;</span></p>
-<p class="p1"><span class="s1"><span class="Apple-converted-space">                </span>PLATS SPÉCIAUX &amp; BBQ SIZZLERS</span></p>
-<p class="p1"><span class="s1"><span class="Apple-converted-space">            </span>&lt;/h2&gt;</span></p>
-<p class="p2"><span class="s1"></span><br></p>
-<p class="p1"><span class="s1"><span class="Apple-converted-space">            </span>&lt;!-- BBQ SIZZLERS --&gt;&lt;h3 class="text-2xl font-semibold mb-4 text-gray-200"&gt;BBQ Sizzlers&lt;/h3&gt;</span></p>
-<p class="p1"><span class="s1"><span class="Apple-converted-space">            </span>&lt;div id="bbq-sizzlers-list" class="space-y-4"&gt;</span></p>
-<p class="p1"><span class="s1"><span class="Apple-converted-space">                </span>&lt;!-- Data will be populated here --&gt;&lt;/div&gt;</span></p>
-<p class="p1"><span class="s1"><span class="Apple-converted-space">            </span>&lt;script&gt;</span></p>
-<p class="p1"><span class="s1"><span class="Apple-converted-space">                </span>const bbqSizzlersData = [</span></p>
-<p class="p1"><span class="s1"><span class="Apple-converted-space">                    </span>["Plateau de Poulet / Chicken Platter", "Riz, légumes, Kabab de poulet, Malai Boti, Poulet Boti, Green Boti.", "28.99"],</span></p>
-<p class="p1"><span class="s1"><span class="Apple-converted-space">                    </span>["Mini Plateau / Mini Platter", "Riz, légumes, Kabab de poulet, Kabab de bœuf, Malai Boti, Green Boti, Bœuf Bihari Boti.", "39.99"],</span></p>
-<p class="p1"><span class="s1"><span class="Apple-converted-space">                    </span>["Plateau Familial / Family Platter", "Riz, légumes, Kabab de poulet, Kabab de bœuf, Green Boti, Malai Boti, Kabab de poulet Bihari, Kabab de bœuf Bihari, Côtelette d'agneau (Lamb Champ).", "64.99"],</span></p>
-<p class="p1"><span class="s1"><span class="Apple-converted-space">                </span>];</span></p>
-<p class="p1"><span class="s1"><span class="Apple-converted-space">                </span>const bbqSizzlersList = document.getElementById('bbq-sizzlers-list');</span></p>
-<p class="p1"><span class="s1"><span class="Apple-converted-space">                </span>bbqSizzlersData.forEach(item =&gt; {</span></p>
-<p class="p1"><span class="s1"><span class="Apple-converted-space">                    </span>bbqSizzlersList.innerHTML += createMenuItem(item[0], item[1], `$${item[2]}`);</span></p>
-<p class="p1"><span class="s1"><span class="Apple-converted-space">                </span>});</span></p>
-<p class="p1"><span class="s1"><span class="Apple-converted-space">            </span>&lt;/script&gt;</span></p>
-<p class="p2"><span class="s1"></span><br></p>
-<p class="p1"><span class="s1"><span class="Apple-converted-space">            </span>&lt;!-- Specials --&gt;&lt;h3 class="text-2xl font-semibold mb-4 mt-8 text-gray-200"&gt;Spéciaux Karahi&lt;/h3&gt;</span></p>
-<p class="p1"><span class="s1"><span class="Apple-converted-space">            </span>&lt;div id="karahi-specials-list" class="space-y-4"&gt;</span></p>
-<p class="p1"><span class="s1"><span class="Apple-converted-space">                </span>&lt;!-- Data will be populated here --&gt;&lt;/div&gt;</span></p>
-<p class="p1"><span class="s1"><span class="Apple-converted-space">            </span>&lt;script&gt;</span></p>
-<p class="p1"><span class="s1"><span class="Apple-converted-space">                </span>const karahiSpecialsData = [</span></p>
-<p class="p1"><span class="s1"><span class="Apple-converted-space">                    </span>["KARAHI AU POULET COMPLET (1kg) / FULL CHICKEN KARAHI (1kg)", "Poulet entier en sauce karahi / Full chicken karahi.", "28.99"],</span></p>
-<p class="p1"><span class="s1"><span class="Apple-converted-space">                    </span>["KARAHI SHENWARI AU POULET (1kg) / SHENWARI CHICKEN KARAHI (1kg)", "Poulet shenwari en karahi / Shenwari chicken karahi.", "28.99"],</span></p>
-<p class="p1"><span class="s1"><span class="Apple-converted-space">                    </span>["KARAHI LAHORI BUTT (1kg) / LAHORI BUTT KARAHI (1kg)", "Karahi lahori au poulet / Lahori butt chicken karahi.", "39.99"],</span></p>
-<p class="p1"><span class="s1"><span class="Apple-converted-space">                    </span>["KARAHI DE CHEVREAU (1kg) / BABY GOAT KARAHI", "Chevreau entier en karahi / Whole baby goat karahi.", "55.99"],</span></p>
-<p class="p1"><span class="s1"><span class="Apple-converted-space">                    </span>["KARAHI DE CHEVREAU (0.5kg) / BABY GOAT KARAHI", "Demi chevreau en karahi / Half baby goat karahi.", "28.99"],</span></p>
-<p class="p1"><span class="s1"><span class="Apple-converted-space">                    </span>["KARAHI D'AGNEAU DÉSOSSÉ (1kg) / LAMB BONELESS KARAHI", "Agneau désossé en karahi / Boneless lamb karahi.", "52.99"],</span></p>
-<p class="p1"><span class="s1"><span class="Apple-converted-space">                </span>];</span></p>
-<p class="p1"><span class="s1"><span class="Apple-converted-space">                </span>const karahiSpecialsList = document.getElementById('karahi-specials-list');</span></p>
-<p class="p1"><span class="s1"><span class="Apple-converted-space">                </span>karahiSpecialsData.forEach(item =&gt; {</span></p>
-<p class="p1"><span class="s1"><span class="Apple-converted-space">                    </span>karahiSpecialsList.innerHTML += createMenuItem(item[0], item[1], `$${item[2]}`);</span></p>
-<p class="p1"><span class="s1"><span class="Apple-converted-space">                </span>});</span></p>
-<p class="p1"><span class="s1"><span class="Apple-converted-space">            </span>&lt;/script&gt;</span></p>
-<p class="p1"><span class="s1"><span class="Apple-converted-space">        </span>&lt;/section&gt;</span></p>
-<p class="p2"><span class="s1"></span><br></p>
-<p class="p1"><span class="s1"><span class="Apple-converted-space">        </span>&lt;!-- MEAL COMBOS --&gt;&lt;section class="mb-10"&gt;</span></p>
-<p class="p1"><span class="s1"><span class="Apple-converted-space">            </span>&lt;h2 class="section-title text-3xl font-bold mb-6 pt-4 text-orange-500"&gt;</span></p>
-<p class="p1"><span class="s1"><span class="Apple-converted-space">                </span>FORMULES REPAS / MEAL COMBOS</span></p>
-<p class="p1"><span class="s1"><span class="Apple-converted-space">            </span>&lt;/h2&gt;</span></p>
-<p class="p1"><span class="s1"><span class="Apple-converted-space">            </span>&lt;p class="text-sm text-center text-gray-400 mb-6"&gt;</span></p>
-<p class="p1"><span class="s1"><span class="Apple-converted-space">                </span>Repas équilibrés, portions individuelles complètes avec accompagnements. &lt;br/&gt; Perfectly balanced, single-serving meals complete with sides.</span></p>
-<p class="p1"><span class="s1"><span class="Apple-converted-space">            </span>&lt;/p&gt;</span></p>
-<p class="p2"><span class="s1"></span><br></p>
-<p class="p1"><span class="s1"><span class="Apple-converted-space">            </span>&lt;div class="grid md:grid-cols-2 gap-x-10 gap-y-8"&gt;</span></p>
-<p class="p1"><span class="s1"><span class="Apple-converted-space">                </span>&lt;!-- Non-Vegetarian Combos --&gt;&lt;div&gt;</span></p>
-<p class="p1"><span class="s1"><span class="Apple-converted-space">                    </span>&lt;h3 class="text-2xl font-semibold mb-4 text-orange-400 border-b border-orange-700 pb-2"&gt;Non-Végétariens / Non-Vegetarian Combos&lt;/h3&gt;</span></p>
-<p class="p1"><span class="s1"><span class="Apple-converted-space">                    </span>&lt;div class="space-y-6"&gt;</span></p>
-<p class="p1"><span class="s1"><span class="Apple-converted-space">                        </span>&lt;div class="border border-gray-700 rounded-lg p-4 hover:bg-gray-800 transition"&gt;</span></p>
-<p class="p1"><span class="s1"><span class="Apple-converted-space">                            </span>&lt;div class="flex justify-between items-center mb-2"&gt;</span></p>
-<p class="p1"><span class="s1"><span class="Apple-converted-space">                                </span>&lt;span class="text-xl font-bold text-gray-100"&gt;1. Combo Classique / Classic Combo&lt;/span&gt;</span></p>
-<p class="p1"><span class="s1"><span class="Apple-converted-space">                                </span>&lt;span class="item-price text-2xl font-extrabold"&gt;$24.99&lt;/span&gt;</span></p>
-<p class="p1"><span class="s1"><span class="Apple-converted-space">                            </span>&lt;/div&gt;</span></p>
-<p class="p1"><span class="s1"><span class="Apple-converted-space">                            </span>&lt;p class="text-sm item-description"&gt;Soupe aux lentilles, Pakora végétarien, Poulet Tandoori, Mouton Balti, Poulet au Piment. Servi avec Riz, Naan, Raita, Dessert.&lt;/p&gt;</span></p>
-<p class="p1"><span class="s1"><span class="Apple-converted-space">                        </span>&lt;/div&gt;</span></p>
-<p class="p1"><span class="s1"><span class="Apple-converted-space">                        </span>&lt;div class="border border-gray-700 rounded-lg p-4 hover:bg-gray-800 transition"&gt;</span></p>
-<p class="p1"><span class="s1"><span class="Apple-converted-space">                            </span>&lt;div class="flex justify-between items-center mb-2"&gt;</span></p>
-<p class="p1"><span class="s1"><span class="Apple-converted-space">                                </span>&lt;span class="text-xl font-bold text-gray-100"&gt;2. Combo Poisson &amp; Crevettes / Fish &amp; Shrimp Combo&lt;/span&gt;</span></p>
-<p class="p1"><span class="s1"><span class="Apple-converted-space">                                </span>&lt;span class="item-price text-2xl font-extrabold"&gt;$26.99&lt;/span&gt;</span></p>
-<p class="p1"><span class="s1"><span class="Apple-converted-space">                            </span>&lt;/div&gt;</span></p>
-<p class="p1"><span class="s1"><span class="Apple-converted-space">                            </span>&lt;p class="text-sm item-description"&gt;Soupe aux lentilles, Pakora végétarien, Pakora au Poisson, Masala au Poisson, Crevettes au Curry. Servi avec Riz, Naan, Raita, Dessert.&lt;/p&gt;</span></p>
-<p class="p1"><span class="s1"><span class="Apple-converted-space">                        </span>&lt;/div&gt;</span></p>
-<p class="p1"><span class="s1"><span class="Apple-converted-space">                        </span>&lt;div class="border border-gray-700 rounded-lg p-4 hover:bg-gray-800 transition"&gt;</span></p>
-<p class="p1"><span class="s1"><span class="Apple-converted-space">                            </span>&lt;div class="flex justify-between items-center mb-2"&gt;</span></p>
-<p class="p1"><span class="s1"><span class="Apple-converted-space">                                </span>&lt;span class="text-xl font-bold text-gray-100"&gt;3. Combo Agneau &amp; Yaourt / Lamb &amp; Yogurt Combo&lt;/span&gt;</span></p>
-<p class="p1"><span class="s1"><span class="Apple-converted-space">                                </span>&lt;span class="item-price text-2xl font-extrabold"&gt;$22.99&lt;/span&gt;</span></p>
-<p class="p1"><span class="s1"><span class="Apple-converted-space">                            </span>&lt;/div&gt;</span></p>
-<p class="p1"><span class="s1"><span class="Apple-converted-space">                            </span>&lt;p class="text-sm item-description"&gt;Soupe aux lentilles, Pakora végétarien, Poulet au Beurre, Curry Végétarien, Yaourt. Servi avec Riz, Naan, Dessert.&lt;/p&gt;</span></p>
-<p class="p1"><span class="s1"><span class="Apple-converted-space">                        </span>&lt;/div&gt;</span></p>
-<p class="p1"><span class="s1"><span class="Apple-converted-space">                        </span>&lt;div class="border border-gray-700 rounded-lg p-4 hover:bg-gray-800 transition"&gt;</span></p>
-<p class="p1"><span class="s1"><span class="Apple-converted-space">                            </span>&lt;div class="flex justify-between items-center mb-2"&gt;</span></p>
-<p class="p1"><span class="s1"><span class="Apple-converted-space">                                </span>&lt;span class="text-xl font-bold text-gray-100"&gt;4. Combo Tandoori &amp; Curry / Tandoori &amp; Curry Combo&lt;/span&gt;</span></p>
-<p class="p1"><span class="s1"><span class="Apple-converted-space">                                </span>&lt;span class="item-price text-2xl font-extrabold"&gt;$26.99&lt;/span&gt;</span></p>
-<p class="p1"><span class="s1"><span class="Apple-converted-space">                            </span>&lt;/div&gt;</span></p>
-<p class="p1"><span class="s1"><span class="Apple-converted-space">                            </span>&lt;p class="text-sm item-description"&gt;Soupe aux lentilles, Poulet Tandoori, Seekh Kabab, Poulet Tikka, Poulet au Beurre, Curry Végétarien, Dessert.&lt;/p&gt;</span></p>
-<p class="p1"><span class="s1"><span class="Apple-converted-space">                        </span>&lt;/div&gt;</span></p>
-<p class="p1"><span class="s1"><span class="Apple-converted-space">                    </span>&lt;/div&gt;</span></p>
-<p class="p1"><span class="s1"><span class="Apple-converted-space">                </span>&lt;/div&gt;</span></p>
-<p class="p2"><span class="s1"></span><br></p>
-<p class="p1"><span class="s1"><span class="Apple-converted-space">                </span>&lt;!-- Vegetarian Combos (Bhajan Végétarien) --&gt;&lt;div&gt;</span></p>
-<p class="p1"><span class="s1"><span class="Apple-converted-space">                    </span>&lt;h3 class="text-2xl font-semibold mb-4 text-orange-400 border-b border-orange-700 pb-2"&gt;Végétariens / Vegetarian Combos&lt;/h3&gt;</span></p>
-<p class="p1"><span class="s1"><span class="Apple-converted-space">                    </span>&lt;div class="space-y-6"&gt;</span></p>
-<p class="p1"><span class="s1"><span class="Apple-converted-space">                        </span>&lt;div class="border border-gray-700 rounded-lg p-4 hover:bg-gray-800 transition"&gt;</span></p>
-<p class="p1"><span class="s1"><span class="Apple-converted-space">                            </span>&lt;div class="flex justify-between items-center mb-2"&gt;</span></p>
-<p class="p1"><span class="s1"><span class="Apple-converted-space">                                </span>&lt;span class="text-xl font-bold text-gray-100"&gt;1. Curry Shahi Paneer / Shahi Paneer Curry&lt;/span&gt;</span></p>
-<p class="p1"><span class="s1"><span class="Apple-converted-space">                                </span>&lt;span class="item-price text-2xl font-extrabold"&gt;$18.99&lt;/span&gt;</span></p>
-<p class="p1"><span class="s1"><span class="Apple-converted-space">                            </span>&lt;/div&gt;</span></p>
-<p class="p1"><span class="s1"><span class="Apple-converted-space">                            </span>&lt;p class="text-sm item-description"&gt;Soupe aux lentilles, Samosa végétarien, Curry Végétarien, Shahi Paneer. Servi avec Raita, Riz, Dessert.&lt;/p&gt;</span></p>
-<p class="p1"><span class="s1"><span class="Apple-converted-space">                        </span>&lt;/div&gt;</span></p>
-<p class="p1"><span class="s1"><span class="Apple-converted-space">                        </span>&lt;div class="border border-gray-700 rounded-lg p-4 hover:bg-gray-800 transition"&gt;</span></p>
-<p class="p1"><span class="s1"><span class="Apple-converted-space">                            </span>&lt;div class="flex justify-between items-center mb-2"&gt;</span></p>
-<p class="p1"><span class="s1"><span class="Apple-converted-space">                                </span>&lt;span class="text-xl font-bold text-gray-100"&gt;2. Curry Matar Paneer / Mattar Paneer Curry&lt;/span&gt;</span></p>
-<p class="p1"><span class="s1"><span class="Apple-converted-space">                                </span>&lt;span class="item-price text-2xl font-extrabold"&gt;$18.99&lt;/span&gt;</span></p>
-<p class="p1"><span class="s1"><span class="Apple-converted-space">                            </span>&lt;/div&gt;</span></p>
-<p class="p1"><span class="s1"><span class="Apple-converted-space">                            </span>&lt;p class="text-sm item-description"&gt;Soupe aux lentilles, Pakora végétarien, Curry Végétarien, Matar Paneer. Servi avec Raita, Naan, Riz, Dessert.&lt;/p&gt;</span></p>
-<p class="p1"><span class="s1"><span class="Apple-converted-space">                        </span>&lt;/div&gt;</span></p>
-<p class="p1"><span class="s1"><span class="Apple-converted-space">                        </span>&lt;div class="border border-gray-700 rounded-lg p-4 hover:bg-gray-800 transition"&gt;</span></p>
-<p class="p1"><span class="s1"><span class="Apple-converted-space">                            </span>&lt;div class="flex justify-between items-center mb-2"&gt;</span></p>
-<p class="p1"><span class="s1"><span class="Apple-converted-space">                                </span>&lt;span class="text-xl font-bold text-gray-100"&gt;3. Curry Fromage &amp; Piment / Cheese &amp; Chili Curry&lt;/span&gt;</span></p>
-<p class="p1"><span class="s1"><span class="Apple-converted-space">                                </span>&lt;span class="item-price text-2xl font-extrabold"&gt;$20.99&lt;/span&gt;</span></p>
-<p class="p1"><span class="s1"><span class="Apple-converted-space">                            </span>&lt;/div&gt;</span></p>
-<p class="p1"><span class="s1"><span class="Apple-converted-space">                            </span>&lt;p class="text-sm item-description"&gt;Soupe aux lentilles, Pakora au Fromage, Chilli Cheese, Curry au Fromage. Servi avec Naan, Riz, Raita, Dessert.&lt;/p&gt;</span></p>
-<p class="p1"><span class="s1"><span class="Apple-converted-space">                        </span>&lt;/div&gt;</span></p>
-<p class="p1"><span class="s1"><span class="Apple-converted-space">                        </span>&lt;div class="border border-gray-700 rounded-lg p-4 hover:bg-gray-800 transition"&gt;</span></p>
-<p class="p1"><span class="s1"><span class="Apple-converted-space">                            </span>&lt;div class="flex justify-between items-center mb-2"&gt;</span></p>
-<p class="p1"><span class="s1"><span class="Apple-converted-space">                                </span>&lt;span class="text-xl font-bold text-gray-100"&gt;4. Manchurian Végétarien / Vegetarian Manchurian&lt;/span&gt;</span></p>
-<p class="p1"><span class="s1"><span class="Apple-converted-space">                                </span>&lt;span class="item-price text-2xl font-extrabold"&gt;$20.99&lt;/span&gt;</span></p>
-<p class="p1"><span class="s1"><span class="Apple-converted-space">                            </span>&lt;/div&gt;</span></p>
-<p class="p1"><span class="s1"><span class="Apple-converted-space">                            </span>&lt;p class="text-sm item-description"&gt;Soupe aux lentilles, Samosa végétal, Malai Paneer, Veg. Manchurian. Servi avec Naan, Raita, Riz, Salade, Dessert.&lt;/p&gt;</span></p>
-<p class="p1"><span class="s1"><span class="Apple-converted-space">                        </span>&lt;/div&gt;</span></p>
-<p class="p1"><span class="s1"><span class="Apple-converted-space">                    </span>&lt;/div&gt;</span></p>
-<p class="p1"><span class="s1"><span class="Apple-converted-space">                </span>&lt;/div&gt;</span></p>
-<p class="p1"><span class="s1"><span class="Apple-converted-space">            </span>&lt;/div&gt;</span></p>
-<p class="p1"><span class="s1"><span class="Apple-converted-space">        </span>&lt;/section&gt;</span></p>
-<p class="p2"><span class="s1"></span><br></p>
-<p class="p1"><span class="s1"><span class="Apple-converted-space">        </span>&lt;!-- DESSERTS ET BOISSONS --&gt;&lt;section class="mb-10"&gt;</span></p>
-<p class="p1"><span class="s1"><span class="Apple-converted-space">            </span>&lt;h2 class="section-title text-3xl font-bold mb-6 pt-4 text-orange-500"&gt;</span></p>
-<p class="p1"><span class="s1"><span class="Apple-converted-space">                </span>DESSERTS ET BOISSONS / SWEETS &amp; BEVERAGES</span></p>
-<p class="p1"><span class="s1"><span class="Apple-converted-space">            </span>&lt;/h2&gt;</span></p>
-<p class="p2"><span class="s1"></span><br></p>
-<p class="p1"><span class="s1"><span class="Apple-converted-space">            </span>&lt;div class="grid md:grid-cols-2 gap-x-10 gap-y-8"&gt;</span></p>
-<p class="p1"><span class="s1"><span class="Apple-converted-space">                </span>&lt;!-- Desserts (Sweets) --&gt;&lt;div&gt;</span></p>
-<p class="p1"><span class="s1"><span class="Apple-converted-space">                    </span>&lt;h3 class="text-2xl font-semibold mb-4 text-gray-200"&gt;Desserts (Sweets)&lt;/h3&gt;</span></p>
-<p class="p1"><span class="s1"><span class="Apple-converted-space">                    </span>&lt;div id="desserts-list" class="space-y-2"&gt;</span></p>
-<p class="p1"><span class="s1"><span class="Apple-converted-space">                        </span>&lt;!-- Data will be populated here --&gt;&lt;/div&gt;</span></p>
-<p class="p1"><span class="s1"><span class="Apple-converted-space">                    </span>&lt;script&gt;</span></p>
-<p class="p1"><span class="s1"><span class="Apple-converted-space">                        </span>const dessertsData = [</span></p>
-<p class="p1"><span class="s1"><span class="Apple-converted-space">                            </span>["1. Gulab Jaman / Gulab Jamun", "Boulettes de lait frites au sirop / Fried milk balls in syrup.", "4.99"],</span></p>
-<p class="p1"><span class="s1"><span class="Apple-converted-space">                            </span>["2. Ras Malai / Rasmalai", "Fromage frais au lait sucré / Cheese in sweetened milk.", "4.99"],</span></p>
-<p class="p1"><span class="s1"><span class="Apple-converted-space">                            </span>["3. Gajan Ka Halwa / Gajar Halwa", "Halwa de carottes / Carrot pudding.", "4.99"],</span></p>
-<p class="p1"><span class="s1"><span class="Apple-converted-space">                        </span>];</span></p>
-<p class="p1"><span class="s1"><span class="Apple-converted-space">                        </span>const dessertsList = document.getElementById('desserts-list');</span></p>
-<p class="p1"><span class="s1"><span class="Apple-converted-space">                        </span>dessertsData.forEach(item =&gt; {</span></p>
-<p class="p1"><span class="s1"><span class="Apple-converted-space">                            </span>dessertsList.innerHTML += createMenuItem(item[0], item[1], `$${item[2]}`);</span></p>
-<p class="p1"><span class="s1"><span class="Apple-converted-space">                        </span>});</span></p>
-<p class="p1"><span class="s1"><span class="Apple-converted-space">                    </span>&lt;/script&gt;</span></p>
-<p class="p1"><span class="s1"><span class="Apple-converted-space">                </span>&lt;/div&gt;</span></p>
-<p class="p2"><span class="s1"></span><br></p>
-<p class="p1"><span class="s1"><span class="Apple-converted-space">                </span>&lt;!-- Boissons (Beverages) --&gt;&lt;div&gt;</span></p>
-<p class="p1"><span class="s1"><span class="Apple-converted-space">                    </span>&lt;h3 class="text-2xl font-semibold mb-4 text-gray-200"&gt;Boissons (Beverages)&lt;/h3&gt;</span></p>
-<p class="p1"><span class="s1"><span class="Apple-converted-space">                    </span>&lt;div id="beverages-list" class="space-y-2"&gt;</span></p>
-<p class="p1"><span class="s1"><span class="Apple-converted-space">                        </span>&lt;!-- Data will be populated here --&gt;&lt;/div&gt;</span></p>
-<p class="p1"><span class="s1"><span class="Apple-converted-space">                    </span>&lt;script&gt;</span></p>
-<p class="p1"><span class="s1"><span class="Apple-converted-space">                        </span>const beveragesData = [</span></p>
-<p class="p1"><span class="s1"><span class="Apple-converted-space">                            </span>["1. Boisson Gazeuse / Soft Drink", "Boisson gazeuse / Soft drink.", "2.99"],</span></p>
-<p class="p1"><span class="s1"><span class="Apple-converted-space">                            </span>["2. Jus de Fruits / Fruit Juice", "Jus frais de fruits / Fresh fruit juice.", "2.99"],</span></p>
-<p class="p1"><span class="s1"><span class="Apple-converted-space">                            </span>["3. Lassi Sucré / Sweet Lassi", "Lassi sucré au yaourt / Sweet yogurt drink.", "4.99"],</span></p>
-<p class="p1"><span class="s1"><span class="Apple-converted-space">                            </span>["4. Lassi Salé / Salted Lassi", "Lassi salé au yaourt / Salted yogurt drink.", "4.99"],</span></p>
-<p class="p1"><span class="s1"><span class="Apple-converted-space">                            </span>["5. Lassi à la Mangue / Mango Lassi", "Lassi à la mangue / Mango yogurt drink.", "5.99"],</span></p>
-<p class="p1"><span class="s1"><span class="Apple-converted-space">                            </span>["6. Frappé à la Mangue / Mango Shake", "Frappé crémeux à la mangue / Creamy mango shake.", "5.99"],</span></p>
-<p class="p1"><span class="s1"><span class="Apple-converted-space">                            </span>["7. Thé au Masala / Masala Tea", "Thé épicé indien / Spiced Indian tea.", "2.99"],</span></p>
-<p class="p1"><span class="s1"><span class="Apple-converted-space">                            </span>["8. Café au Lait / Coffee with Milk", "Café avec lait / Coffee with milk.", "2.99"],</span></p>
-<p class="p1"><span class="s1"><span class="Apple-converted-space">                            </span>["9. Café / Coffee", "Café noir / Black coffee.", "2.99"],</span></p>
-<p class="p1"><span class="s1"><span class="Apple-converted-space">                            </span>["10. Eau Perrier / Perrier Water", "Eau gazeuse Perrier / Perrier sparkling water.", "3.99"],</span></p>
-<p class="p1"><span class="s1"><span class="Apple-converted-space">                            </span>["11. Eau Embouteillée / Bottled Water", "Eau minérale / Mineral water.", "1.99"],</span></p>
-<p class="p1"><span class="s1"><span class="Apple-converted-space">                            </span>["12. Lait aux Amandes / Almond Milk", "Lait d'amande / Almond milk.", "3.99"],</span></p>
-<p class="p1"><span class="s1"><span class="Apple-converted-space">                        </span>];</span></p>
-<p class="p1"><span class="s1"><span class="Apple-converted-space">                        </span>const beveragesList = document.getElementById('beverages-list');</span></p>
-<p class="p1"><span class="s1"><span class="Apple-converted-space">                        </span>beveragesData.forEach(item =&gt; {</span></p>
-<p class="p1"><span class="s1"><span class="Apple-converted-space">                            </span>beveragesList.innerHTML += createMenuItem(item[0], item[1], `$${item[2]}`);</span></p>
-<p class="p1"><span class="s1"><span class="Apple-converted-space">                        </span>});</span></p>
-<p class="p1"><span class="s1"><span class="Apple-converted-space">                    </span>&lt;/script&gt;</span></p>
-<p class="p1"><span class="s1"><span class="Apple-converted-space">                </span>&lt;/div&gt;</span></p>
-<p class="p1"><span class="s1"><span class="Apple-converted-space">            </span>&lt;/div&gt;</span></p>
-<p class="p1"><span class="s1"><span class="Apple-converted-space">        </span>&lt;/section&gt;</span></p>
-<p class="p2"><span class="s1"></span><br></p>
-<p class="p1"><span class="s1"><span class="Apple-converted-space">        </span>&lt;!-- FOOTER --&gt;&lt;footer class="text-center pt-8 border-t border-orange-600/50 mt-10"&gt;</span></p>
-<p class="p1"><span class="s1"><span class="Apple-converted-space">            </span>&lt;p class="text-sm text-gray-500"&gt;Merci de votre visite.&lt;/p&gt;</span></p>
-<p class="p1"><span class="s1"><span class="Apple-converted-space">        </span>&lt;/footer&gt;</span></p>
-<p class="p2"><span class="s1"></span><br></p>
-<p class="p1"><span class="s1"><span class="Apple-converted-space">    </span>&lt;/div&gt;</span></p>
-<p class="p2"><span class="s1"></span><br></p>
-<p class="p1"><span class="s1">&lt;/body&gt;</span></p>
-<p class="p1"><span class="s1">&lt;/html&gt;</span></p>
-</body>
-</html>
+<body class="p-4 sm:p-8">
+
+    <div class="max-w-6xl mx-auto shadow-2xl bg-gray-900/90 rounded-xl p-6 sm:p-12 border border-orange-600/50">
+
+        <!-- HEADER --><header class="text-center mb-12">
+            <h1 class="menu-title text-5xl sm:text-7xl font-bold mb-6 text-orange-600">
+                BOMBAY GRILL<span class="text-gray-100">&</span>SWEETS
+            </h1>
+            <p class="text-lg text-gray-300 mb-4">
+                Authentique Cuisine Indienne & Pâtisseries <br/> Authentic Indian Cuisine & Sweets
+            </p>
+            <p class="text-sm sm:text-base text-gray-400">
+                4771 Sources Blvd, Pierrefonds, Quebec H8Y 3C6 | (514) 421-3522
+            </p>
+        </header>
+
+        <!-- Menu Item Component Function --><script>
+            function createMenuItem(name, description, price) {
+                return `
+                    <div class="flex justify-between items-start py-3 border-b border-gray-700/50 hover:bg-gray-800/50 transition duration-300 px-2 rounded">
+                        <div class="flex flex-col pr-4">
+                            <span class="item-name text-lg text-gray-100">${name}</span>
+                            <p class="item-description mt-0.5">${description}</p>
+                        </div>
+                        <span class="item-price text-xl font-extrabold flex-shrink-0">${price}</span>
+                    </div>
+                `;
+            }
+        </script>
+
+        <!-- APPETIZERS --><section class="mb-10">
+            <h2 class="section-title text-3xl font-bold mb-6 pt-4 text-orange-500">
+                ENTRÉES / APPETIZERS
+            </h2>
+            <div id="appetizers-list" class="grid md:grid-cols-2 gap-x-10 gap-y-4">
+                <!-- Data will be populated here --></div>
+            <script>
+                const appetizersData = [
+                    ["Soupe Dal / Dal Soup", "Soupe de lentilles épicées / Spiced lentil soup.", "3.99"],
+                    ["Soupe Schezwan Poulet & Maïs (Petit) / Schezwan Chicken & Corn Soup (Small)", "Soupe épicée au poulet et maïs / Spicy chicken and corn soup.", "6.99"],
+                    ["Soupe Schezwan Poulet & Maïs (Complet) / Schezwan Chicken & Corn Soup (Full)", "Soupe épicée au poulet et maïs / Spicy chicken and corn soup.", "21.99"],
+                    ["Soupe Spéciale du Chef (Petit) / Chef's Special Soup (Small)", "Soupe signature du chef / Chef's signature soup.", "7.99"],
+                    ["Soupe Spéciale du Chef (Complet) / Chef's Special Soup (Full)", "Soupe signature du chef / Chef's signature soup.", "22.99"],
+                    ["Nouilles au Poulet (Petit) / Chicken Noodles (Small)", "Nouilles sautées au poulet / Stir-fried chicken noodles.", "12.99"],
+                    ["Nouilles au Poulet (Complet) / Chicken Noodles (Full)", "Nouilles sautées au poulet / Stir-fried chicken noodles.", "22.99"],
+                    ["Nouilles Végétales (Petit) / Vegetable Noodles (Small)", "Nouilles sautées aux légumes / Stir-fried vegetable noodles.", "12.99"],
+                    ["Nouilles Végétales (Complet) / Vegetable Noodles (Full)", "Nouilles sautées aux légumes / Stir-fried vegetable noodles.", "22.99"],
+                    ["Poulet Dynamite / Dynamite Chicken", "Poulet frit épicé et croustillant / Spicy crispy fried chicken.", "8.99"],
+                    ["Crevettes Dynamite / Dynamite Shrimp", "Crevettes frites épicées / Spicy crispy fried shrimp.", "22.99"],
+                    ["Ailes au Miel / Honey Wings", "Ailes de poulet au miel et épices / Honey-glazed chicken wings.", "19.99"],
+                    ["Momos Poulet Vapeur / Chicken Steam Momos", "Boulettes de poulet vapeur / Steamed chicken dumplings.", "12.99"],
+                    ["Momos Poulet Tandoori / Chicken Tandoori Momos", "Boulettes de poulet tandoori / Tandoori chicken dumplings.", "13.99"],
+                    ["Momos Poulet Manchurian / Chicken Manchurian Momos", "Boulettes de poulet sauce manchurian / Manchurian chicken dumplings.", "14.99"],
+                    ["Burger Zinger / Zinger Burger", "Burger de poulet épicé / Spicy chicken burger.", "12.99"],
+                    ["Burger Végétal / Veggie Burger", "Burger végétarien / Vegetarian burger.", "6.99"],
+                    ["Burger Trio / Trio Burger", "Burger triple saveur / Triple-flavor burger.", "15.99"],
+                    ["Burger aux Nouilles / Noodle Burger", "Burger aux nouilles / Noodle burger.", "8.99"],
+                    ["Aloo Tiki / Aloo Tikki", "Beignets de pommes de terre épicés / Spiced potato patties.", "4.99"],
+                    ["Chana Samosa / Chana Samosa", "Samosas aux pois chiches / Chickpea samosas.", "4.99"],
+                    ["Bombay Bhel Puri / Bombay Bhel Puri", "Salade croustillante de Bombay / Crispy Bombay salad.", "4.99"],
+                    ["Bombay Chatt Papri / Bombay Chaat Papri", "Chaat croustillant de Bombay / Crispy Bombay chaat.", "4.99"],
+                    ["Pani Puri / Pani Puri", "Boules croustillantes farcies / Stuffed crispy balls.", "4.99"],
+                    ["Dahi Phalla / Dahi Bhalla", "Boulettes de lentilles au yaourt / Yogurt lentil fritters.", "5.99"],
+                    ["Pakora Végétarien / Vegetarian Pakora", "Beignets de légumes / Vegetable fritters.", "6.99"],
+                    ["Pakora au Fromage / Paneer Pakora (Cheese)", "Beignets de fromage paneer / Cheese paneer fritters.", "9.99"],
+                    ["Pakora aux Crevettes / Shrimp Pakora", "Beignets de crevettes / Shrimp fritters.", "19.99"],
+                    ["Manchurian / Manchurian", "Boulettes sauce aigre-douce / Sweet-sour balls.", "9.99"],
+                    ["Champignons Croustillants / Crispy Mushrooms", "Champignons frits croustillants / Crispy fried mushrooms.", "9.99"],
+                    ["Soya Chaap Malai / Malai Soya Chaap", "Soya chaap crémeux / Creamy soya chaap.", "13.99"],
+                    ["Soya Chaap Achari / Achari Soya Chaap", "Soya chaap au pickle / Pickled soya chaap.", "12.99"],
+                    ["Soya Chaap Tandoori / Tandoori Soya Chaap", "Soya chaap tandoori / Tandoori soya chaap.", "11.99"],
+                    ["Paneer Tikka / Paneer Tikka", "Fromage grillé mariné / Marinated grilled cheese.", "13.99"],
+                    ["Paneer Tikka Achari / Achari Paneer Tikka", "Fromage grillé au pickle / Pickled grilled cheese.", "12.99"],
+                    ["Paneer Tikka Malai / Malai Paneer Tikka", "Fromage grillé crémeux / Creamy grilled cheese.", "14.99"],
+                    ["Seekh Kabab / Seekh Kebab", "Brochettes de viande hachée / Minced meat skewers.", "8.99"],
+                    ["Reshmi Kabab / Reshmi Kebab", "Brochettes crémeuses / Creamy skewers.", "8.99"],
+                    ["Kabab Spécial Bombay / Bombay Special Kabab", "Kabab signature de Bombay / Bombay special kebab.", "17.99"],
+                    ["Rouleaux de Printemps / Spring Roll", "Rouleaux croustillants farcis / Crispy stuffed rolls.", "4.99"],
+                    ["Bhaji aux Oignons / Onions Bhaji", "Beignets d'oignons / Onion fritters.", "5.99"],
+                    ["Chana Bhatura / Chana Bhatura", "Pois chiches avec pain frit / Chickpeas with fried bread.", "6.99"],
+                    ["Poisson Lahori / Lahori Fish", "Poisson frit à la Lahori / Lahori fried fish.", "13.99"],
+                    ["Chilli Paneer / Chilli Paneer", "Fromage aux piments / Spicy cheese.", "11.99"],
+                    ["Poulet Manchurian / Chicken Manchurian", "Poulet sauce aigre-douce / Sweet-sour chicken.", "12.99"],
+                    ["Gobi Manchurian / Gobi Manchurian", "Chou-fleur sauce aigre-douce / Sweet-sour cauliflower.", "9.99"],
+                    ["Halwa Puri / Halwa Puri", "Pain frit avec halwa / Fried bread with pudding.", "6.99"],
+                    ["Wrap au Poulet / Chicken Wrap", "Wrap au poulet / Chicken wrap.", "5.99"],
+                    ["Wrap au Fromage / Paneer Wrap", "Wrap au fromage / Cheese wrap.", "5.99"],
+                    ["Wrap Végétal / Veggie Wrap", "Wrap végétarien / Veggie wrap.", "4.99"],
+                    ["Wrap au Bœuf / Beef Wrap", "Wrap au bœuf / Beef wrap.", "4.99"],
+                    ["Poulet Tandoori Hall's / Half Tandoori Chicken", "Demi poulet tandoori / Half tandoori chicken.", "19.99"],
+                    ["Demi-Poulet Tandoori / Half Chicken Tandoori", "Demi poulet mariné grillé / Half marinated grilled chicken.", "10.99"],
+                    ["Poitrine de Poulet / Chicken Breast", "Poitrine de poulet grillée / Grilled chicken breast.", "5.99"],
+                    ["Cuisse de Poulet / Chicken Leg", "Cuisse de poulet grillée / Grilled chicken leg.", "4.99"],
+                ];
+                const appetizerList = document.getElementById('appetizers-list');
+                appetizersData.forEach(item => {
+                    appetizerList.innerHTML += createMenuItem(item[0], item[1], `$${item[2]}`);
+                });
+            </script>
+        </section>
+
+
+        <!-- VE
